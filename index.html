@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E.E. Maria Vicência Brandão</title>
+<link rel="icon" href="img/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topo">
+  <a class="marca" href="#home">
+    <img class="marca-logo" src="img/logo.png" alt="Brasão da E.E. Maria Vicência Brandão">
+    <span class="marca-nome">E.E. Maria Vicência Brandão<small>Padre Fialho · MG</small></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span class="burger" aria-hidden="true"></span><span>Menu</span></button>
+  <nav id="menu" class="menu" aria-label="Principal">
+    <a href="#home">Início</a>
+    <a href="#sobre">A escola</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#linha-do-tempo">Linha do tempo</a>
+    <a href="#calendario">Calendário</a>
+    <a href="#projetos">Projetos</a>
+  </nav>
+</header>
+
+<main>
+  <section class="capa">
+    <div class="capa-txt">
+      <p class="capa-selo">Padre Fialho · Minas Gerais</p>
+      <h1>Educar para <span class="script">transformar.</span><br>Ensinar para a vida.</h1>
+      <p class="capa-sub">Avisos, eventos e projetos da Escola Estadual Maria Vicência Brandão, num só lugar.</p>
+      <a class="botao" href="#home">Ver últimas notícias</a>
+    </div>
+    <figure class="capa-foto"><img src="img/fachada.jpg" alt="Entrada da Escola Estadual Maria Vicência Brandão"></figure>
+  </section>
+
+  <section id="home" class="destaque">
+    <div class="titulo-bloco"><span class="script">fique por dentro</span><h2>Últimas notícias da escola</h2></div>
+    <div class="carrossel">
+      <article class="post" id="post"></article>
+    </div>
+  </section>
+
+  <section id="sobre" class="bloco reveal">
+    <div class="titulo-bloco"><span class="script">conheça</span><h2>A nossa escola</h2></div>
+    <div class="sobre">
+      <div class="sobre-txt">
+        <p>A Escola Estadual Maria Vicência Brandão fica em Padre Fialho, Minas Gerais, e faz parte da SRE Manhuaçu. Aqui você acompanha tudo o que acontece no dia a dia da escola: avisos, eventos, projetos dos alunos e conquistas.</p>
+        <p>Nosso compromisso é educar para transformar e ensinar para a vida, com alunos, famílias e professores caminhando juntos. A escola também oferece o <strong>Ensino Médio Técnico Integrado (EMTI)</strong> em Informática.</p>
+      </div>
+      <ul class="numeros">
+        <li><b>Escola Estadual</b><span>Padre Fialho · Minas Gerais</span></li>
+        <li><b>SRE Manhuaçu</b><span>Superintendência Regional de Ensino</span></li>
+        <li><b>EMTI</b><span>Técnico em Informática</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="eventos" class="bloco reveal">
+    <div class="titulo-bloco"><span class="script">anote na agenda</span><h2>Próximos eventos</h2></div>
+    <ul class="eventos" id="listaEventos"></ul>
+  </section>
+
+  <section id="linha-do-tempo" class="bloco reveal">
+    <div class="titulo-bloco"><span class="script">nossa história no dia a dia</span><h2>Linha do tempo</h2></div>
+    <ol class="linha" id="linha"></ol>
+  </section>
+
+  <section id="calendario" class="bloco reveal">
+    <div class="titulo-bloco"><span class="script">mês a mês</span><h2>Calendário</h2></div>
+    <div class="cal-nav">
+      <button id="mesAnt" aria-label="Mês anterior">&#9664;</button>
+      <strong id="mesTitulo"></strong>
+      <button id="mesProx" aria-label="Próximo mês">&#9654;</button>
+    </div>
+    <div class="cal" id="cal"></div>
+  </section>
+
+  <section id="projetos" class="bloco reveal">
+    <div class="titulo-bloco"><span class="script">feito por quem estuda aqui</span><h2>Projetos dos alunos</h2></div>
+    <div class="projetos">
+      <article class="projeto"><span class="tag">Robótica</span><h3>Irrigação inteligente</h3><p>Sistema automático de irrigação criado pelos alunos, vencedor da feira da escola.</p></article>
+      <article class="projeto"><span class="tag">Arduino</span><h3>Circuito de LEDs</h3><p>Montagem em sala, no Tinkercad, de um Arduino Uno com 9 LEDs piscando em sequência.</p></article>
+      <article class="projeto"><span class="tag">Games</span><h3>Jogo no Roblox</h3><p>Uma equipe de alunos desenvolve o próprio jogo, com quadro de tarefas e divisão de equipe.</p></article>
+    </div>
+  </section>
+
+  <section id="explorar" class="bloco reveal">
+    <div class="titulo-bloco"><span class="script">vá além</span><h2>Explore</h2></div>
+    <div class="atalhos">
+      <a href="#" class="atalho"><strong>Projetos</strong><span>O que os alunos estão construindo</span></a>
+      <a href="#linha-do-tempo" class="atalho"><strong>Linha do tempo</strong><span>Tudo que aconteceu na escola</span></a>
+      <a href="#" class="atalho"><strong>Aulas</strong><span>Materiais por turma</span></a>
+      <a href="#" class="atalho"><strong>Games</strong><span>Jogos feitos pelos alunos</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <img class="rodape-logo" src="img/logo.png" alt="">
+  <p class="nome-script">Maria Vicência Brandão</p>
+  <p><strong>Escola Estadual</strong></p>
+  <p class="lema">Educar para transformar. Ensinar para a vida.</p>
+  <p>Padre Fialho · SRE Manhuaçu · Minas Gerais</p>
+</footer>
+<script src="alunos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
