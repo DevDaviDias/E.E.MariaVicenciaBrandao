@@ -248,3 +248,16 @@ body[data-pagina]:not([data-pagina="inicio"]) main{padding-top:2rem}
 }
 
 .intro{max-width:60ch;color:var(--suave);margin:-.6rem 0 1.6rem}
+
+/* Blog do EMTI */
+.blog-lista{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.blog-card{display:flex;flex-direction:column;background:var(--branco);border:1px solid var(--linha);border-radius:var(--r);box-shadow:var(--sombra);overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s}
+.blog-card:hover{transform:translateY(-4px)}
+.blog-card img,.blog-sem-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:linear-gradient(135deg,var(--azul),var(--azul-2))}
+.blog-corpo{padding:1rem 1.2rem 1.2rem;display:flex;flex-direction:column;gap:.4rem}
+.blog-corpo h3{color:var(--azul);font-size:1.15rem;font-weight:800;line-height:1.2}
+.blog-corpo time{font-size:.85rem;color:var(--suave);font-weight:600}
+.blog-corpo .tag{align-self:flex-start;background:var(--azul);color:var(--amarelo)}
+.blog-vazio{color:var(--suave)}
+.blog-vazio a{color:var(--azul);font-weight:700}
+.blog-mais{margin-top:1.4rem}

@@ -15,6 +15,8 @@ const postagens = [
   {titulo:"Boas-vindas ao novo trimestre", data:"2026-09-15", tag:"Aviso",
    texto:"Confira o calendário e os horários atualizados de cada turma."}
 ];
+// Blog do EMTI (feed público do Blogger)
+const BLOG = "https://eemariavicencia.blogspot.com/";
 // Eventos (data no formato AAAA-MM-DD)
 const eventos = [
   {data:"2026-10-30", nome:"Reunião de pais e mestres"},
@@ -45,7 +47,8 @@ const PAGINAS = [
   {id:"eventos",  href:"eventos.html",        nome:"Eventos",        barra:true},
   {id:"linha",    href:"linha-do-tempo.html", nome:"Linha do tempo", barra:true},
   {id:"projetos", href:"projetos.html",       nome:"Projetos",       barra:true},
-  {id:"games",    href:"games.html",          nome:"Games",          barra:true}
+  {id:"games",    href:"games.html",          nome:"Games",          barra:true},
+  {id:"blog",     href:BLOG,                 nome:"Blog do EMTI",   externo:true}
 ];
 (function layout(){
   const atual = document.body.dataset.pagina;
@@ -53,7 +56,7 @@ const PAGINAS = [
   const topo = document.createElement("header");
   topo.className = "topo";
   topo.innerHTML = `<a class="marca" href="index.html"><img class="marca-logo" src="img/logo.png" alt="Brasão da E.E. Maria Vicência Brandão"><span class="marca-nome">E.E. Maria Vicência Brandão<small>Padre Fialho · MG</small></span></a>
-    <nav class="menu" aria-label="Principal">${PAGINAS.map(p => `<a href="${p.href}"${cls(p)}>${p.nome}</a>`).join("")}</nav>`;
+    <nav class="menu" aria-label="Principal">${PAGINAS.map(p => p.externo ? `<a href="${p.href}" target="_blank" rel="noopener">${p.nome} ↗</a>` : `<a href="${p.href}"${cls(p)}>${p.nome}</a>`).join("")}</nav>`;
   document.body.prepend(topo);
   const rod = document.createElement("footer");
   rod.className = "rodape";
@@ -136,6 +139,30 @@ if ($("listaGames")) {
       </div>
     </article>`).join("") + `
     <article class="game game-novo"><div class="game-corpo"><span class="script">seu jogo aqui</span><h3>Criou um jogo?</h3><p>Fale com seu professor de programação para o jogo da sua equipe aparecer nesta página.</p></div></article>`;
+}
+
+// Blog do EMTI: últimas 3 publicações pelo feed do Blogger
+if ($("blogLista")) {
+  const box = $("blogLista");
+  let ok = false;
+  const falha = () => { if(!ok){ ok = true; box.innerHTML = `<p class="blog-vazio">Não foi possível carregar as publicações agora. <a href="${BLOG}" target="_blank" rel="noopener">Acesse o blog do EMTI ↗</a></p>`; } };
+  window.blogCb = d => {
+    if (ok) return; ok = true;
+    const es = (d.feed && d.feed.entry) || [];
+    if (!es.length) { box.innerHTML = `<p class="blog-vazio">Ainda não há publicações no blog.</p>`; return; }
+    box.innerHTML = es.map(e => {
+      const link = (e.link.find(l => l.rel === "alternate") || {}).href || BLOG;
+      const img = e["media$thumbnail"] ? e["media$thumbnail"].url.replace(/\/s\d+(-c)?\//, "/w640-h360-c/") : "";
+      const cat = e.category && e.category[0] ? e.category[0].term : "";
+      const data = new Date(e.published.$t).toLocaleDateString("pt-BR");
+      return `<a class="blog-card" href="${esc(link)}" target="_blank" rel="noopener">${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : `<div class="blog-sem-img"></div>`}<div class="blog-corpo">${cat ? `<span class="tag">${esc(cat)}</span>` : ""}<h3>${esc(e.title.$t)}</h3><time>${data}</time></div></a>`;
+    }).join("");
+  };
+  const s = document.createElement("script");
+  s.src = `${BLOG}feeds/posts/default?alt=json-in-script&max-results=3&callback=blogCb`;
+  s.onerror = falha;
+  document.head.append(s);
+  setTimeout(falha, 8000);
 }
 
 // Aparece ao rolar
