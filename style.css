@@ -261,3 +261,9 @@ body[data-pagina]:not([data-pagina="inicio"]) main{padding-top:2rem}
 .blog-vazio{color:var(--suave)}
 .blog-vazio a{color:var(--azul);font-weight:700}
 .blog-mais{margin-top:1.4rem}
+
+/* Mural da turma */
+.mural-card img{aspect-ratio:16/9;object-fit:cover}
+.mural-card{cursor:default}
+.mural-card:hover{transform:none}
+.mural-texto{color:var(--texto,inherit);line-height:1.5;margin:0}
