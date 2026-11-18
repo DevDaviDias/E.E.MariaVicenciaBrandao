@@ -1,6 +1,10 @@
 // ====== CONTEÚDO (edite aqui) ======
 // Postagens: da mais recente para a mais antiga. Só a PRIMEIRA aparece em "Últimas notícias"; todas aparecem na Linha do tempo.
 const postagens = [
+  {titulo:"Dia do Diretor: um vídeo para celebrar e agradecer", data:"2026-11-13", tag:"Homenagem",
+   texto:"Este vídeo foi elaborado especialmente em homenagem ao Dia dos Diretores, com o objetivo de demonstrar, de maneira divertida e descontraída, um pouco dos momentos vividos no ambiente escolar. Ao longo do vídeo, são apresentadas cenas engraçadas, brincadeiras e situações que arrancam risadas, mas que também representam o carinho, o respeito e a gratidão que temos por aqueles que fazem parte da nossa escola. Mais do que proporcionar diversão, o vídeo é uma forma de reconhecer a importância dos diretores, que estão sempre presentes, enfrentando desafios, orientando os alunos e contribuindo para que a escola seja um lugar cada vez melhor. Porque, por trás de cada escola, existem pessoas que fazem a diferença. E hoje é dia de celebrar e agradecer por tudo isso!",
+   video:"https://youtu.be/oUQxmhg0YsU" // cole aqui o link do YouTube (ex.: https://youtu.be/xxxx) ou o caminho de um arquivo (ex.: img/dia-do-diretor.mp4)
+  },
   {titulo:"Alunos da escola se preparam para o Simave", data:"2026-10-23", tag:"Simave",
    texto:["Estudantes da nossa escola vão participar da avaliação do <strong>Simave</strong>, o sistema de avaliação da educação pública de Minas Gerais. A prova mostra como cada turma está aprendendo e ajuda a escola a planejar o que vem pela frente.",
           "Não é uma prova para “passar de ano”: é uma oportunidade de mostrar o que aprendemos e de ajudar a melhorar o ensino da nossa escola e da nossa região."],
@@ -26,7 +30,11 @@ const eventos = [
 // Games feitos pelos alunos (HTML, CSS, JS ou outras linguagens). Para incluir um jogo, copie um bloco e preencha.
 // tecnologia: com o que foi feito, ex.: "HTML, CSS e JS", "Python", "Java"
 // link: endereço para jogar (deixe "" se ainda não estiver no ar). capa: imagem opcional, ex.: "img/meu-jogo.jpg"
-const games = [];
+const games = [
+  {titulo:"Nome do jogo", tecnologia:"HTML, CSS e JS", capa:"",
+   texto:"Descreva aqui o jogo: como se joga e o que os alunos aprenderam fazendo.",
+   autores:"nome dos alunos ou da turma", link:""}
+];
 // ===================================
 
 const MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
@@ -44,7 +52,6 @@ const PAGINAS = [
   {id:"linha",    href:"linha-do-tempo.html", nome:"Linha do tempo", barra:true},
   {id:"projetos", href:"projetos.html",       nome:"Projetos",       barra:true},
   {id:"games",    href:"games.html",          nome:"Games",          barra:true},
-  {id:"mural",    href:"mural.html",          nome:"Mural da turma"},
   {id:"blog",     href:BLOG,                 nome:"Blog do EMTI",   externo:true}
 ];
 (function layout(){
@@ -69,12 +76,18 @@ const PAGINAS = [
 // Últimas notícias (somente a primeira postagem da lista)
 if ($("post")) {
   const p = postagens[0];
-  const paras = [].concat(p.texto).map(t => `<p>${t}</p>`).join("");
+  const textos = [].concat(p.texto);
+  const paras = `<div class="post-texto${textos.length > 1 ? " duas" : ""}">${textos.map(t => `<p>${t}</p>`).join("")}</div>`;
   const itens = p.itens ? `<ul class="post-lista">${p.itens.map(([a,b]) => `<li><b>${a}</b>${b}</li>`).join("")}</ul>` : "";
   const nota = p.nota ? `<div class="post-nota"><span class="script">${p.notaTitulo || ""}</span> ${p.nota}</div>` : "";
   const lista = p.alunos ? [...p.alunos].sort((a,b) => a.localeCompare(b,"pt-BR")) : null;
   const alunos = lista ? `<details class="alunos" open><summary>Alunos que farão o Simave <b>${lista.length}</b></summary><div class="alunos-busca"><input type="search" id="buscaAluno" placeholder="Buscar seu nome…" aria-label="Buscar aluno pelo nome" autocomplete="off"><small id="buscaInfo">${lista.length} nomes</small></div><ul id="listaAlunos">${lista.map(n => `<li>${n}</li>`).join("")}</ul></details>` : "";
-  $("post").innerHTML = `<div class="linha-topo"><span class="tag">${p.tag}</span><time datetime="${p.data}">${fmt(p.data)}</time></div><h2>${p.titulo}</h2>${paras}${itens}${nota}${alunos}`;
+  let video = "";
+  if (p.video) {
+    const yt = p.video.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
+    video = `<div class="post-video">${yt ? `<iframe src="https://www.youtube.com/embed/${yt[1]}" title="${esc(p.titulo)}" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>` : `<video src="${esc(p.video)}" controls playsinline preload="metadata"></video>`}</div>`;
+  }
+  $("post").innerHTML = `<div class="linha-topo"><span class="tag">${p.tag}</span><time datetime="${p.data}">${fmt(p.data)}</time></div><h2>${p.titulo}</h2>${p.video ? `<div class="post-duo">${paras}${video}</div>` : paras}${itens}${nota}${alunos}`;
   const busca = $("buscaAluno");
   if (busca) {
     const norm = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
@@ -123,7 +136,7 @@ if ($("cal")) {
 // Games dos alunos
 if ($("listaGames")) {
   const ICONE_GAME = '<svg viewBox="0 0 64 40" aria-hidden="true"><path d="M16 4h32c7 0 10 5 12 14l2 12c1 5-2 8-6 8-3 0-5-2-7-5l-3-4H18l-3 4c-2 3-4 5-7 5-4 0-7-3-6-8l2-12C6 9 9 4 16 4z" fill="currentColor"/><path d="M18 14v8M14 18h8" stroke="#1c2a5e" stroke-width="3" stroke-linecap="round"/><circle cx="43" cy="15" r="2.6" fill="#1c2a5e"/><circle cx="49" cy="21" r="2.6" fill="#1c2a5e"/></svg>';
-  $("listaGames").innerHTML = (games.length ? games : []).map(g => `
+  $("listaGames").innerHTML = games.map(g => `
     <article class="game">
       <div class="game-topo"${g.capa ? ` style="background-image:linear-gradient(180deg,rgba(15,24,56,.1),rgba(15,24,56,.75)),url('${esc(g.capa)}')"` : ""}>
         ${g.capa ? "" : ICONE_GAME}<span class="tag">${esc(g.tecnologia)}</span>
@@ -138,21 +151,6 @@ if ($("listaGames")) {
     <article class="game game-novo"><div class="game-corpo"><span class="script">seu jogo aqui</span><h3>Criou um jogo?</h3><p>Fale com seu professor de programação para o jogo da sua equipe aparecer nesta página.</p></div></article>`;
 }
 
-// Mural da turma: só aparecem postagens com aprovado:true (o professor decide)
-if ($("listaMural")) {
-  const lista = (typeof MURAL !== "undefined" ? MURAL : []).filter(m => m.aprovado === true).sort((a,b) => b.data.localeCompare(a.data));
-  $("listaMural").innerHTML = lista.length ? lista.map(m => `
-    <article class="blog-card mural-card">
-      ${m.imagem ? `<img src="${esc(m.imagem)}" alt="${esc(m.titulo)}" loading="lazy" decoding="async">` : ""}
-      <div class="blog-corpo">
-        <span class="tag">${esc(m.turma || "Turma")}</span>
-        <h3>${esc(m.titulo)}</h3>
-        <p class="mural-texto">${esc(m.texto).replace(/\n\n/g, "</p><p class=\"mural-texto\">")}</p>
-        <time datetime="${esc(m.data)}">${fmt(m.data)} · por ${esc(m.autor)}</time>
-      </div>
-    </article>`).join("") : `<p class="blog-vazio">Ainda não há postagens da turma. Em breve, aqui!</p>`;
-}
-
 // Blog do EMTI: últimas 3 publicações pelo feed do Blogger
 if ($("blogLista")) {
   const box = $("blogLista");
@@ -164,16 +162,10 @@ if ($("blogLista")) {
     if (!es.length) { box.innerHTML = `<p class="blog-vazio">Ainda não há publicações no blog.</p>`; return; }
     box.innerHTML = es.map(e => {
       const link = (e.link.find(l => l.rel === "alternate") || {}).href || BLOG;
-      // Imagem em alta qualidade: pega a foto original do texto da postagem (a miniatura do feed tem só 72px)
-      const html = (e.content && e.content.$t) || (e.summary && e.summary.$t) || "";
-      const m = html.match(/<img[^>]+src=["']([^"']+)["']/i);
-      const orig = m ? m[1] : (e["media$thumbnail"] ? e["media$thumbnail"].url : "");
-      const tam = (u, w, h) => u.replace(/\/(s\d+|w\d+-h\d+)(-[a-z]+)*\//, `/w${w}-h${h}-c/`);
-      const blogger = /googleusercontent\.com|bp\.blogspot\.com/.test(orig);
-      const img = orig ? (blogger ? `src="${esc(tam(orig,960,540))}" srcset="${esc(tam(orig,640,360))} 640w, ${esc(tam(orig,960,540))} 960w, ${esc(tam(orig,1280,720))} 1280w" sizes="(max-width:760px) 100vw, 380px"` : `src="${esc(orig)}"`) : "";
+      const img = e["media$thumbnail"] ? e["media$thumbnail"].url.replace(/\/s\d+(-c)?\//, "/w640-h360-c/") : "";
       const cat = e.category && e.category[0] ? e.category[0].term : "";
       const data = new Date(e.published.$t).toLocaleDateString("pt-BR");
-      return `<a class="blog-card" href="${esc(link)}" target="_blank" rel="noopener">${img ? `<img ${img} alt="" loading="lazy" decoding="async">` : `<div class="blog-sem-img"></div>`}<div class="blog-corpo">${cat ? `<span class="tag">${esc(cat)}</span>` : ""}<h3>${esc(e.title.$t)}</h3><time>${data}</time></div></a>`;
+      return `<a class="blog-card" href="${esc(link)}" target="_blank" rel="noopener">${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : `<div class="blog-sem-img"></div>`}<div class="blog-corpo">${cat ? `<span class="tag">${esc(cat)}</span>` : ""}<h3>${esc(e.title.$t)}</h3><time>${data}</time></div></a>`;
     }).join("");
   };
   const s = document.createElement("script");
