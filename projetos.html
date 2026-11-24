@@ -10,14 +10,29 @@
 </head>
 <body data-pagina="projetos">
 <main>
-<section id="projetos" class="bloco reveal">
-    <div class="titulo-bloco"><span class="script">feito por quem estuda aqui</span><h2>Projetos dos alunos</h2></div>
-    <div class="projetos">
-      <article class="projeto"><span class="tag">Robótica</span><h3>Irrigação inteligente</h3><p>Sistema automático de irrigação criado pelos alunos, vencedor da feira da escola.</p></article>
-      <article class="projeto"><span class="tag">Arduino</span><h3>Circuito de LEDs</h3><p>Montagem em sala, no Tinkercad, de um Arduino Uno com 9 LEDs piscando em sequência.</p></article>
-      <article class="projeto"><span class="tag">Games</span><h3>Jogo no Roblox</h3><p>Uma equipe de alunos desenvolve o próprio jogo, com quadro de tarefas e divisão de equipe.</p></article>
+  <section class="pt-capa">
+    <svg class="pt-circuito" viewBox="0 0 560 380" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+      <path d="M560 60H400l-40 40H250l-30 30H120"/><path d="M560 150H470l-30 30H330v60l-30 30H190"/>
+      <path d="M560 260H500l-40 40H380"/><path d="M560 330H420l-30-30"/><path d="M300 0v70l40 40h60"/>
+      <circle cx="120" cy="130" r="6"/><circle cx="190" cy="270" r="6"/><circle cx="380" cy="300" r="6"/><circle cx="400" cy="110" r="6"/><circle cx="300" cy="70" r="5"/>
+    </svg>
+    <div class="pt-capa-in">
+      <span class="pt-selo">E.E. Maria Vicência Brandão · EMTI, Regular e EJA</span>
+      <h1>Projetos Tecnológicos</h1>
+      <p class="pt-sub">Criatividade, inovação e tecnologia transformando o aprendizado em prática.</p>
+      <p class="pt-apres">Aqui estão os trabalhos criados pelos estudantes do EMTI, do Ensino Regular e da EJA: protótipos, ideias e soluções tecnológicas desenvolvidas durante as atividades escolares. Cada projeto mostra o protagonismo dos alunos e a aplicação prática de robótica, programação, eletrônica, automação e sustentabilidade.</p>
     </div>
   </section>
+  <section class="pt-galeria" aria-label="Galeria de projetos">
+    <div class="pt-feira" id="feiraTxt"></div>
+    <div class="pt-grade" id="projTec"></div>
+    <div class="pt-feira-fecho" id="feiraFecho"></div>
+  </section>
+  <section class="pt-fecho reveal">
+    <strong>Orgulho de cada estudante</strong>
+    Parabéns a todos os estudantes que transformaram ideias em protótipos! Cada projeto mostra talento, dedicação e criatividade, e a nossa escola se orgulha de incentivar a inovação e a aprendizagem prática.
+  </section>
+  <dialog class="pt-lb" id="ptLb" aria-label="Foto ampliada"><button type="button" id="ptLbX" aria-label="Fechar">&times;</button><img id="ptLbImg" alt=""><p id="ptLbTxt"></p></dialog>
 </main>
 <script src="alunos.js"></script>
 <script src="script.js"></script>

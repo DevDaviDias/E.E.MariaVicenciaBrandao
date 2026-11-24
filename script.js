@@ -1,9 +1,21 @@
 // ====== CONTEÚDO (edite aqui) ======
-// Postagens: da mais recente para a mais antiga. Só a PRIMEIRA aparece em "Últimas notícias"; todas aparecem na Linha do tempo.
+// Postagens: da mais recente para a mais antiga. Só a PRIMEIRA aparece em "Últimas notícias"; todas aparecem na Linha do tempo. A com feira:true também alimenta o texto da página Projetos.
 const postagens = [
+  {titulo:"Raízes que ensinam: professores visitam o Museu Capixaba do Negro", data:"2026-11-20", tag:"Consciência Negra",
+   texto:["No Dia da Consciência Negra, 20 de novembro, a Escola Estadual Maria Vicência Brandão compartilha com a comunidade uma experiência de formação vivida por seus professores: a visita pedagógica ao Museu Capixaba do Negro Verônica da Pas (MUCANE), em Vitória (ES). A viagem foi exclusiva para a equipe docente e teve como objetivo ampliar o repertório de quem está todos os dias em sala de aula.","Inaugurado em 5 de julho de 2012, o MUCANE preserva e celebra a memória da população negra do Espírito Santo. Os professores conheceram o acervo permanente, com painéis sobre Olga Maria Borges, Herminio Blackman, Balduino, o Africano, a Revolta de Queimado e Zé Francisco José, além de esculturas e do mural \"Gratia\". Também visitaram a exposição \"Turmalina\", mostra de fotografias de mulheres negras que retrata a religiosidade, a ancestralidade e a cultura afro-brasileira.","Conhecer essas histórias de perto fortalece o trabalho com a Lei 10.639/03, que torna obrigatório o ensino de história e cultura afro-brasileira e africana. Mais do que cumprir uma norma, trata-se de reconhecer que a história do Brasil e do Espírito Santo foi construída também por mulheres e homens negros, e de garantir que todos os estudantes se vejam representados no que aprendem.","A formação continuada é parte do nosso compromisso com uma educação antirracista, que acolhe, respeita e valoriza a diversidade. Levaremos o que vimos e aprendemos para os planejamentos, as aulas e os projetos da escola. Porque, como disse a exposição, o futuro tem raízes."],
+   slides:[["img/mucane/slide-01.jpg", "Grupo de cerca de vinte professores e acompanhantes lado a lado, em frente à parede amarela da exposição \"Turmalina\", com fotografias emolduradas ao fundo."],["img/mucane/slide-02.jpg", "Seis professoras sorrindo em frente a uma parede colorida com logotipos e estampas; a professora da direita tira a selfie."],["img/mucane/slide-03.jpg", "Cinco professoras lado a lado diante de uma parede rosa com fotografias emolduradas."],["img/mucane/slide-04.jpg", "Seis professoras alinhadas diante de uma parede laranja com fotografias emolduradas."],["img/mucane/slide-05.jpg", "Professora em pé diante do grande mural rosa \"Gratia\", com o retrato de uma mulher negra que a olha de cima."],["img/mucane/slide-06.jpg", "Professora ao lado de uma escultura de santo negro com coroa, vestes escuras e um menino de branco nos braços."],["img/mucane/slide-07.jpg", "Professora de costas, com a mão no queixo, observando uma fileira de painéis históricos na parede do museu."],["img/mucane/slide-08.jpg", "Painel dedicado a Olga Maria Borges, com o retrato da educadora sorrindo e um texto biográfico."],["img/mucane/slide-09.jpg", "Escultura em tom terroso de uma mulher sentada, com uma vasilha de barro sobre as pernas."],["img/mucane/slide-10.jpg", "Duas fotografias emolduradas na parede amarela: uma de mãos em um ritual e outra de um altar iluminado por velas."],["img/mucane/slide-11.jpg", "Auditório do museu, com professores sentados em poltronas assistindo a uma palestra ao fundo da sala."],["img/mucane/slide-12.jpg", "Placa metálica de inauguração do Museu Capixaba do Negro (MUCANE), da Prefeitura de Vitória, datada de 5 de julho de 2012."]],
+   slidesTitulo:"Veja como foi a visita",
+  reportagem:true,
+  hero:["img/mucane/galeria/turma-turmalina.jpg","Professores da escola reunidos em fila diante da parede amarela da exposição \"Turmalina\", com fotografias emolduradas ao fundo.","Equipe da E.E. Maria Vicência Brandão na exposição \"Turmalina\", no MUCANE."],
+  galerias:[
+   {titulo:"No acervo permanente", legenda:"Painéis que contam a trajetória de lideranças negras capixabas.", fotos:[["img/mucane/galeria/paineis-historicos.jpg","Professora observando uma fileira de painéis históricos com retratos e biografias, entre eles a Revolta de Queimado.","Painéis do acervo: Olga Maria Borges, Herminio Blackman, Balduino, o Africano, e a Revolta de Queimado."],["img/mucane/galeria/ze-beato.jpg","Painel biográfico de Zé Beato, com retrato e texto sobre o repórter e ativista.","Zé Beato (1951–1982): repórter atento às causas das minorias étnicas."]]},
+   {titulo:"Exposição Turmalina", legenda:"Fotografias de mulheres negras que retratam fé, ancestralidade e cultura afro-brasileira.", fotos:[["img/mucane/galeria/retrato-mulher.jpg","Fotografia de uma mulher negra de colar colorido que olha para o alto, entre galhos floridos.","Retrato exposto em Turmalina."],["img/mucane/galeria/altar-velas.jpg","Duas fotografias emolduradas numa parede amarela mostrando um ritual com mesa de oferendas iluminada por velas.","Rituais e saberes registrados em imagens."],["img/mucane/galeria/mulheres-campo.jpg","Duas fotografias de mulheres negras sorrindo: uma com flor vermelha no cabelo e outra de chapéu, com uma enxada, na roça.","Mulheres da terra, de sorriso aberto."],["img/mucane/galeria/parede-azul.jpg","Parede azul-turquesa com fotografias emolduradas e o desenho de um olho com estrela amarela.","O olho com estrela, símbolo visual da mostra."]]}
+  ],
+  videoVertical:["img/mucane/visita-mucane.mp4","img/mucane/visita-mucane.jpg","Alguns momentos da visita, em movimento."],
+  momento:["img/mucane/galeria/selfie-professores.jpg","Quatro integrantes da equipe sorrindo e fazendo sinal de positivo diante de uma parede rosa com fotografias.","Bom humor e muita troca ao longo do caminho."]},
   {titulo:"Dia do Diretor: um vídeo para celebrar e agradecer", data:"2026-11-13", tag:"Homenagem",
    texto:"Este vídeo foi elaborado especialmente em homenagem ao Dia dos Diretores, com o objetivo de demonstrar, de maneira divertida e descontraída, um pouco dos momentos vividos no ambiente escolar. Ao longo do vídeo, são apresentadas cenas engraçadas, brincadeiras e situações que arrancam risadas, mas que também representam o carinho, o respeito e a gratidão que temos por aqueles que fazem parte da nossa escola. Mais do que proporcionar diversão, o vídeo é uma forma de reconhecer a importância dos diretores, que estão sempre presentes, enfrentando desafios, orientando os alunos e contribuindo para que a escola seja um lugar cada vez melhor. Porque, por trás de cada escola, existem pessoas que fazem a diferença. E hoje é dia de celebrar e agradecer por tudo isso!",
-   video:"https://youtu.be/oUQxmhg0YsU" // cole aqui o link do YouTube (ex.: https://youtu.be/xxxx) ou o caminho de um arquivo (ex.: img/dia-do-diretor.mp4)
+   video:"https://youtu.be/oUQxmhg0YsU?si=2AfzGl-wP7vOcuZj" // cole aqui o link do YouTube (ex.: https://youtu.be/xxxx) ou o caminho de um arquivo (ex.: img/dia-do-diretor.mp4)
   },
   {titulo:"Alunos da escola se preparam para o Simave", data:"2026-10-23", tag:"Simave",
    texto:["Estudantes da nossa escola vão participar da avaliação do <strong>Simave</strong>, o sistema de avaliação da educação pública de Minas Gerais. A prova mostra como cada turma está aprendendo e ajuda a escola a planejar o que vem pela frente.",
@@ -12,13 +24,44 @@ const postagens = [
    alunos:ALUNOS_SIMAVE,
    nota:"Confira abaixo se o seu nome está na lista. Em caso de dúvida sobre data, horário ou sala, procure a secretaria.",
    notaTitulo:"Vamos juntos!"},
-  {titulo:"Projeto de irrigação inteligente é premiado", data:"2026-10-09", tag:"Robótica",
-   texto:"Os alunos do EMTI apresentaram um sistema de irrigação automática e foram os vencedores da feira da escola."},
-  {titulo:"Atividade de Tinkercad no laboratório", data:"2026-10-02", tag:"Informática",
-   texto:"As turmas do 2º ano montaram juntas um circuito com Arduino e LEDs no simulador."},
-  {titulo:"Boas-vindas ao novo trimestre", data:"2026-09-15", tag:"Aviso",
-   texto:"Confira o calendário e os horários atualizados de cada turma."}
+  {titulo:"Feira de Robótica do Ano de 2025", data:"2025-06-07", tag:"Robótica", feira:true, // feira:true = texto de abertura e fecho aparecem também na página Projetos
+  
+   texto:"A Feira de Robótica realizada no ano de 2025 foi um momento de aprendizado, criatividade e inovação. O evento teve como objetivo apresentar projetos desenvolvidos pelos alunos, mostrando como a tecnologia pode ser utilizada para facilitar tarefas do cotidiano e solucionar diferentes problemas.",
+   carrosselTitulo:"Conheça os projetos da feira", // o carrossel (foto + descrição) é montado abaixo a partir de projetosTec
+   fecho:"A feira proporcionou aos alunos a oportunidade de colocar em prática os conhecimentos adquiridos em sala de aula, desenvolver habilidades e compartilhar suas ideias com os visitantes. Foi uma experiência enriquecedora, que mostrou como a robótica pode estar presente em diferentes áreas da sociedade e como a criatividade dos estudantes pode se transformar em soluções inovadoras."}
 ];
+// Projetos tecnológicos dos alunos (página Projetos). Cada projeto: nome, turma, foto e resumo.
+// Para trocar a foto, coloque o arquivo em img/projetos/ e mude o campo img.
+const projetosTec = [
+  {nome:"Robô Misturador de Café", turma:"1º Ano EMTI", img:"img/projetos/robo-misturador-de-cafe.jpg",
+   resumo:"O projeto consiste no desenvolvimento de um protótipo robótico para realizar a mistura do café durante o processo de colheita. A ideia surgiu para auxiliar os trabalhadores que atuam na colheita do café, oferecendo uma solução tecnológica para facilitar essa atividade. O projeto envolve conceitos de robótica, eletrônica e automação."},
+  {nome:"Garagem Automática", turma:"1º Ano EMTI", img:"img/projetos/garagem-automatica.jpg",
+   resumo:"O projeto apresenta um sistema de garagem automatizada, desenvolvido para controlar a abertura e o fechamento de um portão. Utilizando componentes eletrônicos e programação, a proposta demonstra como a automação pode proporcionar mais praticidade e segurança no cotidiano."},
+  {nome:"Ponto Digital", turma:"3º Ano Regular", img:"img/projetos/ponto-digital.jpg",
+   resumo:"O projeto consiste no desenvolvimento de um sistema digital de registro de ponto para os alunos da escola. A proposta busca facilitar o controle de horários e a organização da frequência escolar por meio da tecnologia, explorando conceitos de programação e desenvolvimento de sistemas."},
+  {nome:"Numeris", turma:"3º Ano Regular", img:"img/projetos/numeris.jpg",
+   resumo:"O projeto Numeris apresenta uma proposta tecnológica voltada ao trabalho com números e operações matemáticas. Por meio de recursos de programação e tecnologia, busca explorar o raciocínio lógico e tornar o aprendizado mais interativo."},
+  {nome:"Lixeira com Separador Automático de Resíduos", turma:"2º Ano EMTI", img:"img/projetos/lixeira-separador-residuos.jpg",
+   resumo:"O projeto consiste em uma lixeira inteligente capaz de realizar a separação automática de resíduos. A proposta utiliza recursos de automação e sensores para demonstrar como a tecnologia pode contribuir para a coleta seletiva, a sustentabilidade e a preservação do meio ambiente."},
+  {nome:"Carrinho de Papelão", turma:"2º Ano EMTI", img:"img/projetos/carrinho-de-papelao.jpg",
+   resumo:"O projeto apresenta a construção de um carrinho utilizando papelão e materiais acessíveis. A atividade explora conceitos de criatividade, sustentabilidade e construção de protótipos, mostrando como materiais reutilizáveis podem ser transformados em soluções criativas."},
+  {nome:"Braço Robótico", turma:"1º Ano Regular", img:"img/projetos/braco-robotico.jpg",
+   resumo:"O projeto consiste na construção de um braço robótico capaz de realizar movimentos semelhantes aos de um braço humano. A proposta trabalha conceitos de robótica, eletrônica e programação, demonstrando como mecanismos automatizados podem auxiliar na movimentação de objetos."},
+  {nome:"Robô de Estacionamento", turma:"EJA – Noturno", img:"img/projetos/robo-de-estacionamento.jpg",
+   resumo:"O projeto apresenta um protótipo robótico voltado à simulação de um sistema de estacionamento. A proposta busca explorar conceitos de automação, sensores e programação, demonstrando como a tecnologia pode auxiliar na organização e no controle de espaços de estacionamento."},
+  {nome:"Porta Automática", turma:"1º e 2º Ano – Noturno", img:"img/projetos/porta-automatica.jpg",
+   resumo:"O projeto consiste no desenvolvimento de um sistema de abertura e fechamento automático de uma porta. Por meio da utilização de sensores, componentes eletrônicos e programação, o protótipo demonstra aplicações da automação em ambientes residenciais e comerciais."},
+  {nome:"Seguidor de Luz", turma:"3º Ano – Noturno", img:"img/projetos/seguidor-de-luz.jpg",
+   resumo:"O projeto apresenta um robô capaz de identificar a direção de uma fonte luminosa e movimentar-se em sua direção. Utilizando sensores de luminosidade e programação, o protótipo demonstra conceitos de robótica, automação e interação com o ambiente."},
+  {nome:"Irrigação Automática", turma:"2º Ano Regular – Turma 1", img:"img/projetos/irrigacao-automatica.jpg",
+   resumo:"O projeto consiste em um sistema inteligente de irrigação que utiliza sensores para acompanhar a umidade do solo. Quando identifica a necessidade de água, o sistema pode acionar automaticamente a irrigação, contribuindo para o uso consciente da água e facilitando o cuidado com as plantas."},
+  {nome:"Protótipo de Robô", turma:"1º Ano EMTI", img:"img/projetos/prototipo-de-robo.jpg",
+   resumo:"O projeto consiste no desenvolvimento de um protótipo robótico voltado à segurança residencial. O robô possui movimento na cabeça e capacidade de registrar imagens do ambiente, acompanhando a movimentação das pessoas ao seu redor. A proposta busca demonstrar como a robótica e a tecnologia podem contribuir para o monitoramento e a segurança de ambientes residenciais."},
+  {nome:"Casa Inteligente", turma:"1º Ano EMTI", img:"img/projetos/casa-inteligente.jpg",
+   resumo:"O projeto apresenta um modelo de residência automatizada, utilizando recursos tecnológicos para simular o controle de diferentes funções da casa. A proposta explora conceitos de automação residencial, eletrônica e programação, demonstrando como a tecnologia pode proporcionar mais praticidade e eficiência no cotidiano."}
+];
+// Carrossel da Feira de Robótica (publicação da página inicial): foto, turma, nome e descrição de cada projeto
+postagens.find(p => p.feira).carrossel = projetosTec.map(p => ({titulo:p.nome, texto:p.resumo, img:p.img, turma:p.turma}));
 // Blog do EMTI (feed público do Blogger)
 const BLOG = "https://eemariavicencia.blogspot.com/";
 // Eventos (data no formato AAAA-MM-DD)
@@ -73,36 +116,108 @@ const PAGINAS = [
   document.body.append(barra);
 })();
 
-// Últimas notícias (somente a primeira postagem da lista)
-if ($("post")) {
-  const p = postagens[0];
+// Corpo completo de uma postagem (usado em "Últimas notícias" e ao expandir na Linha do tempo)
+function corpoPost(p, comAlunos) {
   const textos = [].concat(p.texto);
   const paras = `<div class="post-texto${textos.length > 1 ? " duas" : ""}">${textos.map(t => `<p>${t}</p>`).join("")}</div>`;
   const itens = p.itens ? `<ul class="post-lista">${p.itens.map(([a,b]) => `<li><b>${a}</b>${b}</li>`).join("")}</ul>` : "";
   const nota = p.nota ? `<div class="post-nota"><span class="script">${p.notaTitulo || ""}</span> ${p.nota}</div>` : "";
-  const lista = p.alunos ? [...p.alunos].sort((a,b) => a.localeCompare(b,"pt-BR")) : null;
+  const lista = comAlunos && p.alunos ? [...p.alunos].sort((a,b) => a.localeCompare(b,"pt-BR")) : null;
   const alunos = lista ? `<details class="alunos" open><summary>Alunos que farão o Simave <b>${lista.length}</b></summary><div class="alunos-busca"><input type="search" id="buscaAluno" placeholder="Buscar seu nome…" aria-label="Buscar aluno pelo nome" autocomplete="off"><small id="buscaInfo">${lista.length} nomes</small></div><ul id="listaAlunos">${lista.map(n => `<li>${n}</li>`).join("")}</ul></details>` : "";
   let video = "";
   if (p.video) {
     const yt = p.video.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
     video = `<div class="post-video">${yt ? `<iframe src="https://www.youtube.com/embed/${yt[1]}" title="${esc(p.titulo)}" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>` : `<video src="${esc(p.video)}" controls playsinline preload="metadata"></video>`}</div>`;
   }
-  $("post").innerHTML = `<div class="linha-topo"><span class="tag">${p.tag}</span><time datetime="${p.data}">${fmt(p.data)}</time></div><h2>${p.titulo}</h2>${p.video ? `<div class="post-duo">${paras}${video}</div>` : paras}${itens}${nota}${alunos}`;
-  const busca = $("buscaAluno");
-  if (busca) {
-    const norm = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
-    const lis = [...document.querySelectorAll("#listaAlunos li")];
-    busca.oninput = () => {
-      const q = norm(busca.value.trim()); let n = 0;
-      lis.forEach(li => { const ok = norm(li.textContent).includes(q); li.hidden = !ok; if(ok) n++; });
-      $("buscaInfo").textContent = q ? `Mostrando ${n} de ${lis.length} nomes` : `${lis.length} nomes`;
-    };
-  }
+  const carr = p.carrossel ? `${p.carrosselTitulo ? `<h3 class="carr-titulo">${p.carrosselTitulo}</h3>` : ""}<div class="carr"><div class="carr-trilho" tabindex="0" aria-label="Projetos da feira">${p.carrossel.map((c,i) => `<article class="carr-slide${c.img ? " tem-foto" : ""}"><span class="carr-num">${i+1}</span>${c.img ? `<img src="${esc(c.img)}" alt="Fotografia do projeto ${esc(c.titulo)}${c.turma ? `, da turma ${esc(c.turma)}` : ""}" width="960" height="1280" loading="${i < 2 ? "eager" : "lazy"}">` : ""}<div class="carr-txt">${c.turma ? `<span class="carr-turma">${c.turma}</span>` : ""}<h4>${c.titulo}</h4><p>${c.texto}</p></div></article>`).join("")}</div><div class="carr-nav"><button type="button" data-d="-1" aria-label="Projeto anterior">&#9664;</button><span class="carr-pos">1 / ${p.carrossel.length}</span><button type="button" data-d="1" aria-label="Próximo projeto">&#9654;</button></div></div>` : "";
+  const slides = p.slides ? `${p.slidesTitulo ? `<h3 class="carr-titulo">${p.slidesTitulo}</h3>` : ""}<div class="carr"><div class="carr-trilho" tabindex="0" aria-label="Fotos da visita">${p.slides.map(([src,alt],i) => `<article class="carr-slide so-img"><img src="${esc(src)}" alt="${esc(alt)}" width="1080" height="1350" loading="${i < 2 ? "eager" : "lazy"}"></article>`).join("")}</div><div class="carr-nav"><button type="button" data-d="-1" aria-label="Foto anterior">&#9664;</button><span class="carr-pos">1 / ${p.slides.length}</span><button type="button" data-d="1" aria-label="Próxima foto">&#9654;</button></div></div>` : "";
+  const fecho = p.fecho ? `<div class="post-texto post-fecho"><p>${p.fecho}</p></div>` : "";
+  if (p.reportagem) return corpoReportagem(p, textos, slides, fecho, nota, comAlunos);
+  return `<div class="linha-topo"><span class="tag">${p.tag}</span><time datetime="${p.data}">${fmt(p.data)}</time></div><h2>${p.titulo}</h2>${p.video ? `<div class="post-duo">${paras}${video}</div>` : paras}${carr}${slides}${fecho}${itens}${nota}${alunos}`;
 }
 
-// Linha do tempo (todas as postagens)
+
+// Publicação em formato de reportagem: título e texto centralizados, foto de abertura, galerias e vídeo entre os parágrafos
+function corpoReportagem(p, textos, slides, fecho, nota, completo) {
+  if (!completo) return `${p.videoVertical ? videoRep(p.videoVertical) : ""}${slides}`;
+  const fig = ([src,alt,leg], cls="") => `<figure class="rep-fig ${cls}"><button type="button" class="rep-zoom" data-zoom="${esc(src)}" data-alt="${esc(alt)}" aria-label="Ampliar foto: ${esc(alt)}"><img src="${esc(src)}" alt="${esc(alt)}" loading="lazy"></button>${leg ? `<figcaption>${leg}</figcaption>` : ""}</figure>`;
+  const gal = g => `<section class="rep-galeria"><h3>${g.titulo}</h3><p class="rep-leg">${g.legenda}</p><div class="rep-grade n${g.fotos.length}">${g.fotos.map(f => fig(f)).join("")}</div></section>`;
+  const [lead, ...resto] = textos;
+  return `<div class="rep"><header class="rep-topo"><div class="linha-topo"><span class="tag">${p.tag}</span><time datetime="${p.data}">${fmt(p.data)}</time></div><h2>${p.titulo}</h2></header>
+  ${p.hero ? fig(p.hero, "rep-hero") : ""}
+  <div class="rep-texto"><p class="rep-lead">${lead}</p>${resto.slice(0,1).map(t => `<p>${t}</p>`).join("")}</div>
+  ${(p.galerias||[]).map(gal).join("")}
+  <div class="rep-texto">${resto.slice(1,-1).map(t => `<p>${t}</p>`).join("")}</div>
+  ${p.videoVertical ? videoRep(p.videoVertical) : ""}
+  <div class="rep-texto">${resto.slice(-1).map(t => `<p class="rep-final">${t}</p>`).join("")}</div>
+  ${p.momento ? fig(p.momento, "rep-momento") : ""}
+  ${slides}${nota}</div>`;
+}
+function videoRep([src,poster,leg]) { return `<figure class="rep-video"><video src="${esc(src)}" poster="${esc(poster)}" controls playsinline preload="metadata"></video><figcaption>${leg}</figcaption></figure>`; }
+
+// Últimas notícias: começa na mais recente; os botões ◀ ▶ passam pelas postagens
+if ($("post")) {
+  let atual = 0;
+  const mostra = i => {
+    atual = i;
+    $("post").innerHTML = corpoPost(postagens[i], true);
+    $("post").style.animation = "none"; void $("post").offsetWidth; $("post").style.animation = "";
+    $("btnRecente").disabled = i === 0;
+    $("btnAntiga").disabled = i === postagens.length - 1;
+    const busca = $("buscaAluno");
+    if (busca) {
+      const norm = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+      const lis = [...document.querySelectorAll("#listaAlunos li")];
+      busca.oninput = () => {
+        const q = norm(busca.value.trim()); let n = 0;
+        lis.forEach(li => { const ok = norm(li.textContent).includes(q); li.hidden = !ok; if(ok) n++; });
+        $("buscaInfo").textContent = q ? `Mostrando ${n} de ${lis.length} nomes` : `${lis.length} nomes`;
+      };
+    }
+  };
+  $("btnRecente").onclick = () => mostra(atual - 1);
+  $("btnAntiga").onclick = () => mostra(atual + 1);
+  mostra(0);
+}
+
+// Linha do tempo (todas as postagens; as que têm carrossel abrem completas ao clicar)
 if ($("linha")) $("linha").innerHTML = postagens.map(p =>
-  `<li><time datetime="${p.data}">${fmt(p.data)}</time><h3>${p.titulo}</h3><p>${[].concat(p.texto)[0].replace(/<[^>]+>/g,"")}</p></li>`).join("");
+  `<li><time datetime="${p.data}">${fmt(p.data)}</time><h3>${p.titulo}</h3><p>${[].concat(p.texto)[0].replace(/<[^>]+>/g,"")}</p>${p.carrossel || p.slides ? `<details class="mais"><summary>Ver publicação completa</summary><div class="mais-corpo">${corpoPost(p, false)}</div></details>` : ""}</li>`).join("");
+
+// Carrossel: botões e contador (funciona em qualquer carrossel da página)
+document.addEventListener("click", e => {
+  const bt = e.target.closest(".carr-nav button"); if (!bt) return;
+  const tr = bt.closest(".carr").querySelector(".carr-trilho");
+  tr.scrollBy({left: +bt.dataset.d * tr.clientWidth, behavior: "smooth"});
+});
+document.addEventListener("scroll", e => {
+  const tr = e.target; if (!tr.classList || !tr.classList.contains("carr-trilho")) return;
+  const n = tr.children.length, i = Math.min(n, Math.round(tr.scrollLeft / tr.clientWidth) + 1);
+  tr.parentNode.querySelector(".carr-pos").textContent = `${i} / ${n}`;
+}, true);
+
+// Projetos: publicação da Feira de Robótica (ano passado) em volta da galeria
+if ($("feiraTxt")) {
+  const f = postagens.find(p => p.feira);
+  $("feiraTxt").innerHTML = `<span class="pt-turma">Publicação anterior · <time datetime="${f.data}">${fmt(f.data)}</time></span><h2>${f.titulo}</h2><p>${[].concat(f.texto)[0]}</p><h3>Conheça os ${projetosTec.length} projetos</h3><small>Toque ou clique na foto para ampliar.</small>`;
+  if ($("feiraFecho")) $("feiraFecho").innerHTML = `<p>${f.fecho}</p>`;
+}
+
+// Projetos tecnológicos: grade de cards (um card por projeto) com foto ampliável
+if ($("projTec")) {
+  const lupa = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>';
+  $("projTec").innerHTML = projetosTec.map((p,i) => `<article class="pt-card reveal"><figure class="pt-foto"><button type="button" data-i="${i}" aria-label="Ampliar foto do projeto ${esc(p.nome)}"><img src="${esc(p.img)}" alt="Fotografia do projeto ${esc(p.nome)}, da turma ${esc(p.turma)}" width="960" height="1280" loading="${i < 3 ? "eager" : "lazy"}"></button><span class="pt-num">${String(i+1).padStart(2,"0")}</span><span class="pt-zoom">${lupa}</span></figure><div class="pt-corpo"><span class="pt-turma">${p.turma}</span><h3>${p.nome}</h3><p>${p.resumo}</p></div></article>`).join("");
+  const lb = $("ptLb");
+  $("projTec").addEventListener("click", e => {
+    const b = e.target.closest("button[data-i]"); if (!b || !lb.showModal) return;
+    const p = projetosTec[+b.dataset.i];
+    $("ptLbImg").src = p.img; $("ptLbImg").alt = `Fotografia do projeto ${p.nome}`;
+    $("ptLbTxt").textContent = `${p.nome} · ${p.turma}`;
+    lb.showModal();
+  });
+  $("ptLbX").onclick = () => lb.close();
+  lb.addEventListener("click", e => { if (e.target === lb) lb.close(); });
+}
 
 // Eventos
 if ($("listaEventos")) $("listaEventos").innerHTML = eventos.map(e => {
@@ -178,3 +293,18 @@ if ($("blogLista")) {
 // Aparece ao rolar
 const rev = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("visivel"); rev.unobserve(e.target); } }), {threshold:.08});
 document.querySelectorAll(".reveal").forEach(el => rev.observe(el));
+
+
+// Ampliar fotos das reportagens
+document.addEventListener("click", e => {
+  const b = e.target.closest(".rep-zoom"); if (!b) return;
+  let d = document.getElementById("lightbox");
+  if (!d) {
+    d = document.createElement("dialog"); d.id = "lightbox"; d.className = "lightbox";
+    d.innerHTML = `<button type="button" class="lb-fechar" aria-label="Fechar">&times;</button><img alt="">`;
+    d.addEventListener("click", ev => { if (ev.target !== d.querySelector("img")) d.close(); });
+    document.body.append(d);
+  }
+  const im = d.querySelector("img"); im.src = b.dataset.zoom; im.alt = b.dataset.alt || "";
+  d.showModal();
+});
