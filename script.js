@@ -1,4 +1,5 @@
 // ====== CONTEÚDO (edite aqui) ======
+<<<<<<< Updated upstream
 // Postagens: da mais recente para a mais antiga. Só a PRIMEIRA aparece em "Últimas notícias"; todas aparecem na Linha do tempo. A com feira:true também alimenta o texto da página Projetos.
 const postagens = [
   {titulo:"Raízes que ensinam: professores visitam o Museu Capixaba do Negro", data:"2026-11-20", tag:"Consciência Negra",
@@ -16,6 +17,13 @@ const postagens = [
   {titulo:"Dia do Diretor: um vídeo para celebrar e agradecer", data:"2026-11-13", tag:"Homenagem",
    texto:"Este vídeo foi elaborado especialmente em homenagem ao Dia dos Diretores, com o objetivo de demonstrar, de maneira divertida e descontraída, um pouco dos momentos vividos no ambiente escolar. Ao longo do vídeo, são apresentadas cenas engraçadas, brincadeiras e situações que arrancam risadas, mas que também representam o carinho, o respeito e a gratidão que temos por aqueles que fazem parte da nossa escola. Mais do que proporcionar diversão, o vídeo é uma forma de reconhecer a importância dos diretores, que estão sempre presentes, enfrentando desafios, orientando os alunos e contribuindo para que a escola seja um lugar cada vez melhor. Porque, por trás de cada escola, existem pessoas que fazem a diferença. E hoje é dia de celebrar e agradecer por tudo isso!",
    video:"https://youtu.be/oUQxmhg0YsU?si=2AfzGl-wP7vOcuZj" // cole aqui o link do YouTube (ex.: https://youtu.be/xxxx) ou o caminho de um arquivo (ex.: img/dia-do-diretor.mp4)
+=======
+// Postagens: da mais recente para a mais antiga. Só a PRIMEIRA aparece em "Últimas notícias"; todas aparecem na Linha do tempo.
+const postagens = [
+  {titulo:"Dia do Diretor: um vídeo para celebrar e agradecer", data:"2026-11-13", tag:"Homenagem",
+   texto:"Este vídeo foi elaborado especialmente em homenagem ao Dia dos Diretores, com o objetivo de demonstrar, de maneira divertida e descontraída, um pouco dos momentos vividos no ambiente escolar. Ao longo do vídeo, são apresentadas cenas engraçadas, brincadeiras e situações que arrancam risadas, mas que também representam o carinho, o respeito e a gratidão que temos por aqueles que fazem parte da nossa escola. Mais do que proporcionar diversão, o vídeo é uma forma de reconhecer a importância dos diretores, que estão sempre presentes, enfrentando desafios, orientando os alunos e contribuindo para que a escola seja um lugar cada vez melhor. Porque, por trás de cada escola, existem pessoas que fazem a diferença. E hoje é dia de celebrar e agradecer por tudo isso!",
+   video:"" // cole aqui o link do YouTube (ex.: https://youtu.be/xxxx) ou o caminho de um arquivo (ex.: img/dia-do-diretor.mp4)
+>>>>>>> Stashed changes
   },
   {titulo:"Alunos da escola se preparam para o Simave", data:"2026-10-23", tag:"Simave",
    texto:["Estudantes da nossa escola vão participar da avaliação do <strong>Simave</strong>, o sistema de avaliação da educação pública de Minas Gerais. A prova mostra como cada turma está aprendendo e ajuda a escola a planejar o que vem pela frente.",
@@ -24,6 +32,7 @@ const postagens = [
    alunos:ALUNOS_SIMAVE,
    nota:"Confira abaixo se o seu nome está na lista. Em caso de dúvida sobre data, horário ou sala, procure a secretaria.",
    notaTitulo:"Vamos juntos!"},
+<<<<<<< Updated upstream
   {titulo:"Feira de Robótica do Ano de 2025", data:"2025-06-07", tag:"Robótica", feira:true, // feira:true = texto de abertura e fecho aparecem também na página Projetos
   
    texto:"A Feira de Robótica realizada no ano de 2025 foi um momento de aprendizado, criatividade e inovação. O evento teve como objetivo apresentar projetos desenvolvidos pelos alunos, mostrando como a tecnologia pode ser utilizada para facilitar tarefas do cotidiano e solucionar diferentes problemas.",
@@ -62,6 +71,25 @@ const projetosTec = [
 ];
 // Carrossel da Feira de Robótica (publicação da página inicial): foto, turma, nome e descrição de cada projeto
 postagens.find(p => p.feira).carrossel = projetosTec.map(p => ({titulo:p.nome, texto:p.resumo, img:p.img, turma:p.turma}));
+=======
+  {titulo:"Projeto de irrigação inteligente é premiado", data:"2026-10-09", tag:"Robótica",
+   texto:"Os alunos do EMTI apresentaram um sistema de irrigação automática e foram os vencedores da feira da escola."},
+  {titulo:"Atividade de Tinkercad no laboratório", data:"2026-10-02", tag:"Informática",
+   texto:"As turmas do 2º ano montaram juntas um circuito com Arduino e LEDs no simulador."},
+  {titulo:"Boas-vindas ao novo trimestre", data:"2026-09-15", tag:"Aviso",
+   texto:"Confira o calendário e os horários atualizados de cada turma."},
+  {titulo:"Feira de Robótica do Ano Passado", data:"2025-06-07", tag:"Robótica",
+   texto:"A Feira de Robótica realizada no ano passado foi um momento de aprendizado, criatividade e inovação. O evento teve como objetivo apresentar projetos desenvolvidos pelos alunos, mostrando como a tecnologia pode ser utilizada para facilitar tarefas do cotidiano e solucionar diferentes problemas.",
+   carrosselTitulo:"Entre os projetos apresentados",
+   carrossel:[ // para pôr foto em um projeto, acrescente img:"img/nome-da-foto.jpg"
+     {titulo:"Impressora que desenhava", texto:"Desenvolvida para reproduzir desenhos automaticamente em uma folha de papel. O projeto demonstrou como a programação e os mecanismos eletrônicos podem ser utilizados para transformar comandos em movimentos e criações."},
+     {titulo:"Lixeira eletrônica", texto:"Buscava unir tecnologia e sustentabilidade, incentivando o descarte correto dos resíduos e contribuindo para a preservação do meio ambiente."},
+     {titulo:"Carrinho mexedor de café", texto:"Desenvolvido para auxiliar os produtores rurais no processo de secagem dos grãos, facilitando o trabalho e tornando a atividade mais prática."},
+     {titulo:"Ponto digital", texto:"Criado para modernizar o registro de horários de entrada e saída, tornando o controle de frequência mais organizado e eficiente."},
+     {titulo:"Casa com sensor de incêndio", texto:"Demonstrou como a tecnologia pode contribuir para a segurança, utilizando sensores para identificar possíveis sinais de incêndio e emitir alertas."}],
+   fecho:"A feira proporcionou aos alunos a oportunidade de colocar em prática os conhecimentos adquiridos em sala de aula, desenvolver habilidades e compartilhar suas ideias com os visitantes. Foi uma experiência enriquecedora, que mostrou como a robótica pode estar presente em diferentes áreas da sociedade e como a criatividade dos estudantes pode se transformar em soluções inovadoras."}
+];
+>>>>>>> Stashed changes
 // Blog do EMTI (feed público do Blogger)
 const BLOG = "https://eemariavicencia.blogspot.com/";
 // Eventos (data no formato AAAA-MM-DD)
@@ -129,6 +157,7 @@ function corpoPost(p, comAlunos) {
     const yt = p.video.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
     video = `<div class="post-video">${yt ? `<iframe src="https://www.youtube.com/embed/${yt[1]}" title="${esc(p.titulo)}" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>` : `<video src="${esc(p.video)}" controls playsinline preload="metadata"></video>`}</div>`;
   }
+<<<<<<< Updated upstream
   const carr = p.carrossel ? `${p.carrosselTitulo ? `<h3 class="carr-titulo">${p.carrosselTitulo}</h3>` : ""}<div class="carr"><div class="carr-trilho" tabindex="0" aria-label="Projetos da feira">${p.carrossel.map((c,i) => `<article class="carr-slide${c.img ? " tem-foto" : ""}"><span class="carr-num">${i+1}</span>${c.img ? `<img src="${esc(c.img)}" alt="Fotografia do projeto ${esc(c.titulo)}${c.turma ? `, da turma ${esc(c.turma)}` : ""}" width="960" height="1280" loading="${i < 2 ? "eager" : "lazy"}">` : ""}<div class="carr-txt">${c.turma ? `<span class="carr-turma">${c.turma}</span>` : ""}<h4>${c.titulo}</h4><p>${c.texto}</p></div></article>`).join("")}</div><div class="carr-nav"><button type="button" data-d="-1" aria-label="Projeto anterior">&#9664;</button><span class="carr-pos">1 / ${p.carrossel.length}</span><button type="button" data-d="1" aria-label="Próximo projeto">&#9654;</button></div></div>` : "";
   const slides = p.slides ? `${p.slidesTitulo ? `<h3 class="carr-titulo">${p.slidesTitulo}</h3>` : ""}<div class="carr"><div class="carr-trilho" tabindex="0" aria-label="Fotos da visita">${p.slides.map(([src,alt],i) => `<article class="carr-slide so-img"><img src="${esc(src)}" alt="${esc(alt)}" width="1080" height="1350" loading="${i < 2 ? "eager" : "lazy"}"></article>`).join("")}</div><div class="carr-nav"><button type="button" data-d="-1" aria-label="Foto anterior">&#9664;</button><span class="carr-pos">1 / ${p.slides.length}</span><button type="button" data-d="1" aria-label="Próxima foto">&#9654;</button></div></div>` : "";
   const fecho = p.fecho ? `<div class="post-texto post-fecho"><p>${p.fecho}</p></div>` : "";
@@ -178,11 +207,35 @@ if ($("post")) {
   $("btnRecente").onclick = () => mostra(atual - 1);
   $("btnAntiga").onclick = () => mostra(atual + 1);
   mostra(0);
+=======
+  const carr = p.carrossel ? `${p.carrosselTitulo ? `<h3 class="carr-titulo">${p.carrosselTitulo}</h3>` : ""}<div class="carr"><div class="carr-trilho" tabindex="0" aria-label="Projetos apresentados">${p.carrossel.map((c,i) => `<article class="carr-slide"><span class="carr-num">${i+1}</span>${c.img ? `<img src="${esc(c.img)}" alt="${esc(c.titulo)}" loading="lazy">` : ""}<div class="carr-txt"><h4>${c.titulo}</h4><p>${c.texto}</p></div></article>`).join("")}</div><div class="carr-nav"><button type="button" data-d="-1" aria-label="Projeto anterior">&#9664;</button><span class="carr-pos">1 / ${p.carrossel.length}</span><button type="button" data-d="1" aria-label="Próximo projeto">&#9654;</button></div></div>` : "";
+  const fecho = p.fecho ? `<div class="post-texto post-fecho"><p>${p.fecho}</p></div>` : "";
+  return `<div class="linha-topo"><span class="tag">${p.tag}</span><time datetime="${p.data}">${fmt(p.data)}</time></div><h2>${p.titulo}</h2>${p.video ? `<div class="post-duo">${paras}${video}</div>` : paras}${carr}${fecho}${itens}${nota}${alunos}`;
+}
+
+// Últimas notícias (somente a primeira postagem da lista)
+if ($("post")) {
+  $("post").innerHTML = corpoPost(postagens[0], true);
+  const busca = $("buscaAluno");
+  if (busca) {
+    const norm = t => t.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+    const lis = [...document.querySelectorAll("#listaAlunos li")];
+    busca.oninput = () => {
+      const q = norm(busca.value.trim()); let n = 0;
+      lis.forEach(li => { const ok = norm(li.textContent).includes(q); li.hidden = !ok; if(ok) n++; });
+      $("buscaInfo").textContent = q ? `Mostrando ${n} de ${lis.length} nomes` : `${lis.length} nomes`;
+    };
+  }
+>>>>>>> Stashed changes
 }
 
 // Linha do tempo (todas as postagens; as que têm carrossel abrem completas ao clicar)
 if ($("linha")) $("linha").innerHTML = postagens.map(p =>
+<<<<<<< Updated upstream
   `<li><time datetime="${p.data}">${fmt(p.data)}</time><h3>${p.titulo}</h3><p>${[].concat(p.texto)[0].replace(/<[^>]+>/g,"")}</p>${p.carrossel || p.slides ? `<details class="mais"><summary>Ver publicação completa</summary><div class="mais-corpo">${corpoPost(p, false)}</div></details>` : ""}</li>`).join("");
+=======
+  `<li><time datetime="${p.data}">${fmt(p.data)}</time><h3>${p.titulo}</h3><p>${[].concat(p.texto)[0].replace(/<[^>]+>/g,"")}</p>${p.carrossel ? `<details class="mais"><summary>Ver publicação completa</summary><div class="mais-corpo">${corpoPost(p, false)}</div></details>` : ""}</li>`).join("");
+>>>>>>> Stashed changes
 
 // Carrossel: botões e contador (funciona em qualquer carrossel da página)
 document.addEventListener("click", e => {
@@ -196,6 +249,7 @@ document.addEventListener("scroll", e => {
   tr.parentNode.querySelector(".carr-pos").textContent = `${i} / ${n}`;
 }, true);
 
+<<<<<<< Updated upstream
 // Projetos: publicação da Feira de Robótica (ano passado) em volta da galeria
 if ($("feiraTxt")) {
   const f = postagens.find(p => p.feira);
@@ -219,6 +273,8 @@ if ($("projTec")) {
   lb.addEventListener("click", e => { if (e.target === lb) lb.close(); });
 }
 
+=======
+>>>>>>> Stashed changes
 // Eventos
 if ($("listaEventos")) $("listaEventos").innerHTML = eventos.map(e => {
   const [a,m,d] = e.data.split("-");
@@ -293,6 +349,7 @@ if ($("blogLista")) {
 // Aparece ao rolar
 const rev = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("visivel"); rev.unobserve(e.target); } }), {threshold:.08});
 document.querySelectorAll(".reveal").forEach(el => rev.observe(el));
+<<<<<<< Updated upstream
 
 
 // Ampliar fotos das reportagens
@@ -308,3 +365,5 @@ document.addEventListener("click", e => {
   const im = d.querySelector("img"); im.src = b.dataset.zoom; im.alt = b.dataset.alt || "";
   d.showModal();
 });
+=======
+>>>>>>> Stashed changes

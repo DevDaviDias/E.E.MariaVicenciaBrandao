@@ -313,6 +313,7 @@ body[data-pagina]:not([data-pagina="inicio"]) main{padding-top:2rem}
 .mais-corpo{margin-top:.8rem;padding-top:.8rem;border-top:1px dashed var(--linha)}
 .mais-corpo>.linha-topo,.mais-corpo>h2{display:none}
 .mais-corpo>.post-texto:not(.post-fecho){display:none}
+<<<<<<< Updated upstream
 
 /* ===== Página Projetos Tecnológicos ===== */
 .pt-capa{position:relative;overflow:hidden;color:#fff;background:radial-gradient(900px 420px at 88% -10%,rgba(0,212,255,.30),transparent 60%),radial-gradient(600px 300px at 0% 110%,rgba(30,107,255,.35),transparent 60%),linear-gradient(135deg,#070d26,#0c1f5c 65%,#0b3b8f);padding:4.2rem max(1.25rem,calc((100% - var(--larg))/2)) 4.8rem}
@@ -423,3 +424,5 @@ body[data-pagina]:not([data-pagina="inicio"]) main{padding-top:2rem}
 .lightbox::backdrop{background:rgba(8,14,40,.92)}
 .lightbox img{position:absolute;inset:0;margin:auto;max-width:94vw;max-height:90vh;border-radius:8px;object-fit:contain}
 .lb-fechar{position:absolute;top:max(.8rem,env(safe-area-inset-top));right:1rem;z-index:2;width:2.8rem;height:2.8rem;border-radius:50%;border:0;background:var(--amarelo);color:var(--azul);font-size:1.8rem;line-height:1;cursor:pointer}
+=======
+>>>>>>> Stashed changes
