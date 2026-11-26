@@ -23,10 +23,19 @@
       <p class="pt-apres">Aqui estão os trabalhos criados pelos estudantes do EMTI, do Ensino Regular e da EJA: protótipos, ideias e soluções tecnológicas desenvolvidas durante as atividades escolares. Cada projeto mostra o protagonismo dos alunos e a aplicação prática de robótica, programação, eletrônica, automação e sustentabilidade.</p>
     </div>
   </section>
-  <section class="pt-galeria" aria-label="Galeria de projetos">
+  <nav class="pt-tipos" aria-label="Tipos de projeto">
+    <a href="#robotica">Robótica e automação <span id="cntRobotica"></span></a>
+    <a href="#jogos">Jogos <span id="cntJogos"></span></a>
+  </nav>
+  <section class="pt-galeria" id="robotica" aria-labelledby="tRobotica">
+    <div class="pt-topo"><h2 id="tRobotica">Robótica e automação</h2><p>Protótipos da Feira de Robótica de 2025</p></div>
     <div class="pt-feira" id="feiraTxt"></div>
     <div class="pt-grade" id="projTec"></div>
     <div class="pt-feira-fecho" id="feiraFecho"></div>
+  </section>
+  <section class="pt-galeria pt-jogos" id="jogos" aria-labelledby="tJogos">
+    <div class="pt-topo"><h2 id="tJogos">Jogos feitos pelos alunos</h2><p>Criados com HTML, CSS, JavaScript e outras linguagens</p></div>
+    <div class="games" id="listaGames"></div>
   </section>
   <section class="pt-fecho reveal">
     <strong>Orgulho de cada estudante</strong>

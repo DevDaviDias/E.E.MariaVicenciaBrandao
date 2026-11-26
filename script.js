@@ -3,7 +3,7 @@
 const postagens = [
   {titulo:"Palestra conscientiza alunos sobre os riscos do consumo de bebidas energéticas", data:"2026-11-23", tag:"Saúde",
    texto:"Foi realizada uma palestra sobre o uso excessivo de bebidas energéticas, com o objetivo de conscientizar os alunos sobre os riscos que essas bebidas podem causar à saúde. Durante a palestra, foram abordados os efeitos da cafeína e de outras substâncias presentes nos energéticos, que, quando consumidas em excesso, podem provocar insônia, ansiedade, aumento dos batimentos cardíacos e outros problemas de saúde. A palestra foi importante para informar os estudantes sobre a necessidade de ter hábitos saudáveis e evitar o consumo exagerado dessas bebidas, contribuindo para uma melhor qualidade de vida.",
-   video:"https://youtu.be/yJLRMZ9ufOk?si=ujhrdMK-MiL8Pvqw"}, // cole entre as aspas o link do YouTube (ex.: https://youtu.be/xxxx)
+   video:""}, // cole entre as aspas o link do YouTube (ex.: https://youtu.be/xxxx)
   {titulo:"Raízes que ensinam: professores visitam o Museu Capixaba do Negro", data:"2026-11-20", tag:"Consciência Negra",
    texto:["No Dia da Consciência Negra, 20 de novembro, a Escola Estadual Maria Vicência Brandão compartilha com a comunidade uma experiência de formação vivida por seus professores: a visita pedagógica ao Museu Capixaba do Negro Verônica da Pas (MUCANE), em Vitória (ES). A viagem foi exclusiva para a equipe docente e teve como objetivo ampliar o repertório de quem está todos os dias em sala de aula.","Inaugurado em 5 de julho de 2012, o MUCANE preserva e celebra a memória da população negra do Espírito Santo. Os professores conheceram o acervo permanente, com painéis sobre Olga Maria Borges, Herminio Blackman, Balduino, o Africano, a Revolta de Queimado e Zé Francisco José, além de esculturas e do mural \"Gratia\". Também visitaram a exposição \"Turmalina\", mostra de fotografias de mulheres negras que retrata a religiosidade, a ancestralidade e a cultura afro-brasileira.","Conhecer essas histórias de perto fortalece o trabalho com a Lei 10.639/03, que torna obrigatório o ensino de história e cultura afro-brasileira e africana. Mais do que cumprir uma norma, trata-se de reconhecer que a história do Brasil e do Espírito Santo foi construída também por mulheres e homens negros, e de garantir que todos os estudantes se vejam representados no que aprendem.","A formação continuada é parte do nosso compromisso com uma educação antirracista, que acolhe, respeita e valoriza a diversidade. Levaremos o que vimos e aprendemos para os planejamentos, as aulas e os projetos da escola. Porque, como disse a exposição, o futuro tem raízes."],
    slides:[["img/mucane/slide-01.jpg", "Grupo de cerca de vinte professores e acompanhantes lado a lado, em frente à parede amarela da exposição \"Turmalina\", com fotografias emolduradas ao fundo."],["img/mucane/slide-02.jpg", "Seis professoras sorrindo em frente a uma parede colorida com logotipos e estampas; a professora da direita tira a selfie."],["img/mucane/slide-03.jpg", "Cinco professoras lado a lado diante de uma parede rosa com fotografias emolduradas."],["img/mucane/slide-04.jpg", "Seis professoras alinhadas diante de uma parede laranja com fotografias emolduradas."],["img/mucane/slide-05.jpg", "Professora em pé diante do grande mural rosa \"Gratia\", com o retrato de uma mulher negra que a olha de cima."],["img/mucane/slide-06.jpg", "Professora ao lado de uma escultura de santo negro com coroa, vestes escuras e um menino de branco nos braços."],["img/mucane/slide-07.jpg", "Professora de costas, com a mão no queixo, observando uma fileira de painéis históricos na parede do museu."],["img/mucane/slide-08.jpg", "Painel dedicado a Olga Maria Borges, com o retrato da educadora sorrindo e um texto biográfico."],["img/mucane/slide-09.jpg", "Escultura em tom terroso de uma mulher sentada, com uma vasilha de barro sobre as pernas."],["img/mucane/slide-10.jpg", "Duas fotografias emolduradas na parede amarela: uma de mãos em um ritual e outra de um altar iluminado por velas."],["img/mucane/slide-11.jpg", "Auditório do museu, com professores sentados em poltronas assistindo a uma palestra ao fundo da sala."],["img/mucane/slide-12.jpg", "Placa metálica de inauguração do Museu Capixaba do Negro (MUCANE), da Prefeitura de Vitória, datada de 5 de julho de 2012."]],
@@ -73,13 +73,12 @@ const eventos = [
   {data:"2026-11-12", nome:"Feira de ciências e tecnologia"},
   {data:"2026-11-20", nome:"Dia da Consciência Negra"}
 ];
-// Games feitos pelos alunos (HTML, CSS, JS ou outras linguagens). Para incluir um jogo, copie um bloco e preencha.
-// tecnologia: com o que foi feito, ex.: "HTML, CSS e JS", "Python", "Java"
-// link: endereço para jogar (deixe "" se ainda não estiver no ar). capa: imagem opcional, ex.: "img/meu-jogo.jpg"
+// Games feitos pelos alunos (aparecem na página Projetos, seção "Jogos"). Para incluir um jogo, copie o bloco de exemplo abaixo, tire o // e preencha.
+// tecnologia: com o que foi feito, ex.: "HTML, CSS e JS", "Python", "Java" | link: endereço para jogar ("" se ainda não estiver no ar) | capa: imagem opcional, ex.: "img/meu-jogo.jpg"
 const games = [
-  {titulo:"Nome do jogo", tecnologia:"HTML, CSS e JS", capa:"",
-   texto:"Descreva aqui o jogo: como se joga e o que os alunos aprenderam fazendo.",
-   autores:"nome dos alunos ou da turma", link:""}
+  // {titulo:"Nome do jogo", tecnologia:"HTML, CSS e JS", capa:"",
+  //  texto:"Como se joga e o que os alunos aprenderam fazendo.",
+  //  autores:"nome dos alunos ou da turma", link:""},
 ];
 // ===================================
 
@@ -90,14 +89,13 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":
 
 // ===== Menu e rodapé (editar aqui vale para todas as páginas) =====
 // barra:true = aparece no menu de baixo do celular (use no máximo 5)
-const ICONES = {"inicio": "<path d=\"M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z\"/>", "eventos": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 10h18M8 3v4M16 3v4\"/>", "linha": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>", "projetos": "<path d=\"M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z\"/>", "games": "<rect x=\"2\" y=\"7\" width=\"20\" height=\"11\" rx=\"5\"/><path d=\"M7 10v5M4.5 12.5h5\"/><circle cx=\"16\" cy=\"11.5\" r=\".6\"/><circle cx=\"18.5\" cy=\"14\" r=\".6\"/>"};
+const ICONES = {"inicio": "<path d=\"M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z\"/>", "eventos": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 10h18M8 3v4M16 3v4\"/>", "linha": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>", "projetos": "<path d=\"M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z\"/>", "escola": "<path d=\"M3 10l9-6 9 6\"/><path d=\"M5 10v9M19 10v9M9 19v-6h6v6M3 19h18\"/>"};
 const PAGINAS = [
   {id:"inicio",   href:"index.html",          nome:"Início",         barra:true},
-  {id:"escola",   href:"escola.html",         nome:"A escola"},
+  {id:"escola",   href:"escola.html",         nome:"A escola",       barra:true},
   {id:"eventos",  href:"eventos.html",        nome:"Eventos",        barra:true},
   {id:"linha",    href:"linha-do-tempo.html", nome:"Linha do tempo", barra:true},
   {id:"projetos", href:"projetos.html",       nome:"Projetos",       barra:true},
-  {id:"games",    href:"games.html",          nome:"Games",          barra:true},
   {id:"blog",     href:BLOG,                 nome:"Blog do EMTI",   externo:true}
 ];
 (function layout(){
@@ -108,9 +106,17 @@ const PAGINAS = [
   topo.innerHTML = `<a class="marca" href="index.html"><img class="marca-logo" src="img/logo.png" alt="Brasão da E.E. Maria Vicência Brandão"><span class="marca-nome">E.E. Maria Vicência Brandão<small>Padre Fialho · MG</small></span></a>
     <nav class="menu" aria-label="Principal">${PAGINAS.map(p => p.externo ? `<a href="${p.href}" target="_blank" rel="noopener">${p.nome} ↗</a>` : `<a href="${p.href}"${cls(p)}>${p.nome}</a>`).join("")}</nav>`;
   document.body.prepend(topo);
+  const pular = document.createElement("a");
+  pular.className = "pular"; pular.href = "#conteudo"; pular.textContent = "Pular para o conteúdo";
+  document.body.prepend(pular);
+  const main = document.querySelector("main");
+  if (main) { main.id = "conteudo"; main.tabIndex = -1; }
+  const medeTopo = () => document.documentElement.style.setProperty("--topo-h", topo.offsetHeight + "px");
+  medeTopo(); addEventListener("resize", medeTopo);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(medeTopo);
   const rod = document.createElement("footer");
   rod.className = "rodape";
-  rod.innerHTML = `<img class="rodape-logo" src="img/logo.png" alt=""><p class="nome-script">Maria Vicência Brandão</p><p><strong>Escola Estadual</strong></p><p class="lema">Educar para transformar. Ensinar para a vida.</p><p>Padre Fialho · SRE Manhuaçu · Minas Gerais</p>`;
+  rod.innerHTML = `<img class="rodape-logo" src="img/logo.png" alt=""><p class="nome-script">Maria Vicência Brandão</p><p><strong>Escola Estadual</strong></p><p class="lema">Educar para transformar. Ensinar para a vida.</p><nav class="rodape-nav" aria-label="Todas as páginas do site">${PAGINAS.map(p => p.externo ? `<a href="${p.href}" target="_blank" rel="noopener">${p.nome} ↗</a>` : `<a href="${p.href}"${cls(p)}>${p.nome}</a>`).join("")}</nav><p>Padre Fialho · SRE Manhuaçu · Minas Gerais</p>`;
   document.body.append(rod);
   const barra = document.createElement("nav");
   barra.className = "barra";
@@ -158,15 +164,39 @@ function corpoReportagem(p, textos, slides, fecho, nota, completo) {
 }
 function videoRep([src,poster,leg]) { return `<figure class="rep-video"><video src="${esc(src)}" poster="${esc(poster)}" controls playsinline preload="metadata"></video><figcaption>${leg}</figcaption></figure>`; }
 
-// Últimas notícias: começa na mais recente; os botões ◀ ▶ passam pelas postagens
+// Últimas notícias: leitor com navegação no TOPO (fica fixa no computador) e no FIM de cada publicação
 if ($("post")) {
+  const caixa = $("noticias"), total = postagens.length;
+  const setaE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>';
+  const setaD = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
   let atual = 0;
-  const mostra = i => {
+  $("nTotal").textContent = total;
+
+  // Fim da publicação (só aparece no celular): dois botões simples
+  const fimDaPostagem = i => `<button type="button" class="n-btn" data-dir="-1" aria-label="Ir para a notícia mais recente"${i === 0 ? " disabled" : ""}>${setaE}<span>Mais recente</span></button><button type="button" class="n-btn" data-dir="1" aria-label="Ir para a notícia mais antiga"${i === total - 1 ? " disabled" : ""}><span>Mais antiga</span>${setaD}</button>`;
+
+  const mostra = (i, navegou) => {
     atual = i;
-    $("post").innerHTML = corpoPost(postagens[i], true);
-    $("post").style.animation = "none"; void $("post").offsetWidth; $("post").style.animation = "";
-    $("btnRecente").disabled = i === 0;
-    $("btnAntiga").disabled = i === postagens.length - 1;
+    const post = $("post");
+    post.innerHTML = corpoPost(postagens[i], true);
+    post.style.animation = "none"; void post.offsetWidth; post.style.animation = "";
+    $("nPos").textContent = i + 1;
+    $("nFim").innerHTML = fimDaPostagem(i);
+    caixa.querySelectorAll(".n-barra .n-btn").forEach(b => { b.disabled = i + (+b.dataset.dir) < 0 || i + (+b.dataset.dir) >= total; });
+
+    // Endereço compartilhável (?noticia=2). Em alguns navegadores abertos direto do disco isso é bloqueado: ignora.
+    try { history.replaceState(null, "", i ? `?noticia=${i+1}#home` : location.pathname + "#home"); } catch (e) {}
+
+    if (navegou) {
+      // Avisa leitores de tela só o título (e não o texto inteiro) e leva o foco para o começo da publicação
+      $("noticiaStatus").textContent = `Notícia ${i+1} de ${total}: ${postagens[i].titulo.replace(/<[^>]+>/g,"")}`;
+      const h = post.querySelector("h2");
+      if (h) { h.tabIndex = -1; h.focus({preventScroll:true}); }
+      // Se quem clicou estava lá embaixo (botões do fim) ou no meio do texto, volta ao começo da nova notícia
+      const topoFixo = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--topo-h")) || 72;
+      if (caixa.getBoundingClientRect().top < topoFixo) caixa.scrollIntoView({block:"start"});
+    }
+
     const busca = $("buscaAluno");
     if (busca) {
       const norm = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
@@ -178,9 +208,17 @@ if ($("post")) {
       };
     }
   };
-  $("btnRecente").onclick = () => mostra(atual - 1);
-  $("btnAntiga").onclick = () => mostra(atual + 1);
-  mostra(0);
+
+  // Um único ouvinte atende os botões do topo e os cartões do fim
+  caixa.addEventListener("click", e => {
+    const b = e.target.closest("button[data-dir]");
+    if (!b || b.disabled) return;
+    const alvo = atual + (+b.dataset.dir);
+    if (alvo >= 0 && alvo < total) mostra(alvo, true);
+  });
+
+  const n = parseInt(new URLSearchParams(location.search).get("noticia"), 10);
+  mostra(n >= 1 && n <= total ? n - 1 : 0, false);
 }
 
 // Linha do tempo (todas as postagens; as que têm carrossel abrem completas ao clicar)
@@ -202,9 +240,12 @@ document.addEventListener("scroll", e => {
 // Projetos: publicação da Feira de Robótica (ano passado) em volta da galeria
 if ($("feiraTxt")) {
   const f = postagens.find(p => p.feira);
-  $("feiraTxt").innerHTML = `<span class="pt-turma">Publicação anterior · <time datetime="${f.data}">${fmt(f.data)}</time></span><h2>${f.titulo}</h2><p>${[].concat(f.texto)[0]}</p><h3>Conheça os ${projetosTec.length} projetos</h3><small>Toque ou clique na foto para ampliar.</small>`;
+  $("feiraTxt").innerHTML = `<span class="pt-turma">Publicação anterior · <time datetime="${f.data}">${fmt(f.data)}</time></span><h3 class="pt-feira-tit">${f.titulo}</h3><p>${[].concat(f.texto)[0]}</p><h3>Conheça os ${projetosTec.length} projetos</h3><small>Toque ou clique na foto para ampliar.</small>`;
   if ($("feiraFecho")) $("feiraFecho").innerHTML = `<p>${f.fecho}</p>`;
 }
+
+// Contadores nos atalhos de tipo
+if ($("cntRobotica")) { $("cntRobotica").textContent = projetosTec.length; $("cntJogos").textContent = games.length || "em breve"; }
 
 // Projetos tecnológicos: grade de cards (um card por projeto) com foto ampliável
 if ($("projTec")) {
@@ -254,7 +295,8 @@ if ($("cal")) {
 // Games dos alunos
 if ($("listaGames")) {
   const ICONE_GAME = '<svg viewBox="0 0 64 40" aria-hidden="true"><path d="M16 4h32c7 0 10 5 12 14l2 12c1 5-2 8-6 8-3 0-5-2-7-5l-3-4H18l-3 4c-2 3-4 5-7 5-4 0-7-3-6-8l2-12C6 9 9 4 16 4z" fill="currentColor"/><path d="M18 14v8M14 18h8" stroke="#1c2a5e" stroke-width="3" stroke-linecap="round"/><circle cx="43" cy="15" r="2.6" fill="#1c2a5e"/><circle cx="49" cy="21" r="2.6" fill="#1c2a5e"/></svg>';
-  $("listaGames").innerHTML = games.map(g => `
+  if (!games.length) $("listaGames").innerHTML = `<article class="game game-novo game-vazio"><div class="game-corpo"><span class="script">em breve</span><h3>Os jogos da turma chegam aqui</h3><p>Os jogos criados pelos alunos de programação vão aparecer nesta seção, com link para jogar.</p></div></article>`;
+  else $("listaGames").innerHTML = games.map(g => `
     <article class="game">
       <div class="game-topo"${g.capa ? ` style="background-image:linear-gradient(180deg,rgba(15,24,56,.1),rgba(15,24,56,.75)),url('${esc(g.capa)}')"` : ""}>
         ${g.capa ? "" : ICONE_GAME}<span class="tag">${esc(g.tecnologia)}</span>
@@ -270,6 +312,23 @@ if ($("listaGames")) {
 }
 
 // Blog do EMTI: últimas 3 publicações pelo feed do Blogger
+// Imagens: o Blogger entrega miniaturas minúsculas (72 px). Aqui pegamos a foto original dentro da publicação
+// e pedimos ao Blogger o tamanho certo (w = largura). Vídeos do YouTube usam a capa em boa resolução.
+const tamanhoBlogger = (u, w) => {
+  const h = Math.round(w * 9 / 16), t = `w${w}-h${h}-c`;
+  return u.replace(/\/(?:s|w)\d+[^\/?]*\//, `/${t}/`).replace(/=(?:s|w)\d+[^=\/?]*$/, `=${t}`);
+};
+function imagemDoPost(e) {
+  const html = (e.content && e.content.$t) || (e.summary && e.summary.$t) || "";
+  const tmp = new DOMParser().parseFromString(html, "text/html");
+  const foto = tmp.querySelector("img[src]");
+  let src = foto ? foto.getAttribute("src") : (e["media$thumbnail"] ? e["media$thumbnail"].url : "");
+  const yt = (src.match(/ytimg\.com\/vi\/([\w-]{11})\//) || html.match(/youtube(?:-nocookie)?\.com\/embed\/([\w-]{11})/) || html.match(/ytimg\.com\/vi\/([\w-]{11})\//) || [])[1];
+  if (yt && (!src || /ytimg\.com|youtube/.test(src))) { const u = `https://i.ytimg.com/vi/${yt}/hqdefault.jpg`; return {src:u, srcset:""}; }
+  if (!src) return {src:"", srcset:""};
+  if (/googleusercontent\.com|blogspot\.com|bp\.blogspot/.test(src)) return {src:tamanhoBlogger(src, 800), srcset:`${tamanhoBlogger(src, 600)} 600w, ${tamanhoBlogger(src, 1200)} 1200w`};
+  return {src, srcset:""};
+}
 if ($("blogLista")) {
   const box = $("blogLista");
   let ok = false;
@@ -280,10 +339,10 @@ if ($("blogLista")) {
     if (!es.length) { box.innerHTML = `<p class="blog-vazio">Ainda não há publicações no blog.</p>`; return; }
     box.innerHTML = es.map(e => {
       const link = (e.link.find(l => l.rel === "alternate") || {}).href || BLOG;
-      const img = e["media$thumbnail"] ? e["media$thumbnail"].url.replace(/\/s\d+(-c)?\//, "/w640-h360-c/") : "";
+      const im = imagemDoPost(e);
       const cat = e.category && e.category[0] ? e.category[0].term : "";
       const data = new Date(e.published.$t).toLocaleDateString("pt-BR");
-      return `<a class="blog-card" href="${esc(link)}" target="_blank" rel="noopener">${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : `<div class="blog-sem-img"></div>`}<div class="blog-corpo">${cat ? `<span class="tag">${esc(cat)}</span>` : ""}<h3>${esc(e.title.$t)}</h3><time>${data}</time></div></a>`;
+      return `<a class="blog-card" href="${esc(link)}" target="_blank" rel="noopener">${im.src ? `<img src="${esc(im.src)}"${im.srcset ? ` srcset="${esc(im.srcset)}" sizes="(max-width:600px) 92vw, 360px"` : ""} alt="" width="640" height="360" loading="lazy" decoding="async">` : `<div class="blog-sem-img"></div>`}<div class="blog-corpo">${cat ? `<span class="tag">${esc(cat)}</span>` : ""}<h3>${esc(e.title.$t)}</h3><time>${data}</time></div></a>`;
     }).join("");
   };
   const s = document.createElement("script");
