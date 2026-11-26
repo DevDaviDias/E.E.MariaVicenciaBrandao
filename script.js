@@ -1,7 +1,7 @@
 // ====== CONTEÚDO (edite aqui) ======
 // Postagens: da mais recente para a mais antiga. Só a PRIMEIRA aparece em "Últimas notícias"; todas aparecem na Linha do tempo. A com feira:true também alimenta o texto da página Projetos.
 const postagens = [
-  {titulo:"Palestra conscientiza alunos sobre os riscos do consumo de bebidas energéticas", data:"2026-11-23", tag:"Saúde",
+   {titulo:"Palestra conscientiza alunos sobre os riscos do consumo de bebidas energéticas", data:"2026-11-23", tag:"Saúde",
    texto:"Foi realizada uma palestra sobre o uso excessivo de bebidas energéticas, com o objetivo de conscientizar os alunos sobre os riscos que essas bebidas podem causar à saúde. Durante a palestra, foram abordados os efeitos da cafeína e de outras substâncias presentes nos energéticos, que, quando consumidas em excesso, podem provocar insônia, ansiedade, aumento dos batimentos cardíacos e outros problemas de saúde. A palestra foi importante para informar os estudantes sobre a necessidade de ter hábitos saudáveis e evitar o consumo exagerado dessas bebidas, contribuindo para uma melhor qualidade de vida.",
    video:"https://youtu.be/yJLRMZ9ufOk?si=fLyUGP36pqhxQzN9"}, // cole entre as aspas o link do YouTube (ex.: https://youtu.be/xxxx)
   {titulo:"Raízes que ensinam: professores visitam o Museu Capixaba do Negro", data:"2026-11-20", tag:"Consciência Negra",
