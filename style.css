@@ -458,3 +458,6 @@ body[data-pagina]:not([data-pagina="inicio"]) main{padding-top:2rem}
 .pt-jogos .game-novo{border:2px dashed #1e6bff;border-bottom-width:2px;background:transparent}
 .pt-jogos .game-novo .script{color:#1448b8}
 .pt-jogos .game-vazio{grid-column:1/-1;max-width:620px;margin:0 auto;padding:1.2rem 0;text-align:center}
+
+.post-video-yt{display:inline-flex;align-items:center;min-height:44px;margin-top:.2rem;color:var(--suave);font-size:.92rem;font-weight:600}
+.post-video-yt:hover{color:var(--azul)}
