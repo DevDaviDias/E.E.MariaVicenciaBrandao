@@ -3,11 +3,7 @@
 const postagens = [
   {titulo:"Palestra conscientiza alunos sobre os riscos do consumo de bebidas energéticas", data:"2026-11-23", tag:"Saúde",
    texto:"Foi realizada uma palestra sobre o uso excessivo de bebidas energéticas, com o objetivo de conscientizar os alunos sobre os riscos que essas bebidas podem causar à saúde. Durante a palestra, foram abordados os efeitos da cafeína e de outras substâncias presentes nos energéticos, que, quando consumidas em excesso, podem provocar insônia, ansiedade, aumento dos batimentos cardíacos e outros problemas de saúde. A palestra foi importante para informar os estudantes sobre a necessidade de ter hábitos saudáveis e evitar o consumo exagerado dessas bebidas, contribuindo para uma melhor qualidade de vida.",
-<<<<<<< Updated upstream
    video:"https://youtu.be/yJLRMZ9ufOk?si=fLyUGP36pqhxQzN9"}, // link do YouTube (ex.: https://youtu.be/xxxx)
-=======
-   video:""}, // cole entre as aspas o link do YouTube (ex.: https://youtu.be/xxxx)
->>>>>>> Stashed changes
   {titulo:"Raízes que ensinam: professores visitam o Museu Capixaba do Negro", data:"2026-11-20", tag:"Consciência Negra",
    texto:["No Dia da Consciência Negra, 20 de novembro, a Escola Estadual Maria Vicência Brandão compartilha com a comunidade uma experiência de formação vivida por seus professores: a visita pedagógica ao Museu Capixaba do Negro Verônica da Pas (MUCANE), em Vitória (ES). A viagem foi exclusiva para a equipe docente e teve como objetivo ampliar o repertório de quem está todos os dias em sala de aula.","Inaugurado em 5 de julho de 2012, o MUCANE preserva e celebra a memória da população negra do Espírito Santo. Os professores conheceram o acervo permanente, com painéis sobre Olga Maria Borges, Herminio Blackman, Balduino, o Africano, a Revolta de Queimado e Zé Francisco José, além de esculturas e do mural \"Gratia\". Também visitaram a exposição \"Turmalina\", mostra de fotografias de mulheres negras que retrata a religiosidade, a ancestralidade e a cultura afro-brasileira.","Conhecer essas histórias de perto fortalece o trabalho com a Lei 10.639/03, que torna obrigatório o ensino de história e cultura afro-brasileira e africana. Mais do que cumprir uma norma, trata-se de reconhecer que a história do Brasil e do Espírito Santo foi construída também por mulheres e homens negros, e de garantir que todos os estudantes se vejam representados no que aprendem.","A formação continuada é parte do nosso compromisso com uma educação antirracista, que acolhe, respeita e valoriza a diversidade. Levaremos o que vimos e aprendemos para os planejamentos, as aulas e os projetos da escola. Porque, como disse a exposição, o futuro tem raízes."],
    slides:[["img/mucane/slide-01.jpg", "Grupo de cerca de vinte professores e acompanhantes lado a lado, em frente à parede amarela da exposição \"Turmalina\", com fotografias emolduradas ao fundo."],["img/mucane/slide-02.jpg", "Seis professoras sorrindo em frente a uma parede colorida com logotipos e estampas; a professora da direita tira a selfie."],["img/mucane/slide-03.jpg", "Cinco professoras lado a lado diante de uma parede rosa com fotografias emolduradas."],["img/mucane/slide-04.jpg", "Seis professoras alinhadas diante de uma parede laranja com fotografias emolduradas."],["img/mucane/slide-05.jpg", "Professora em pé diante do grande mural rosa \"Gratia\", com o retrato de uma mulher negra que a olha de cima."],["img/mucane/slide-06.jpg", "Professora ao lado de uma escultura de santo negro com coroa, vestes escuras e um menino de branco nos braços."],["img/mucane/slide-07.jpg", "Professora de costas, com a mão no queixo, observando uma fileira de painéis históricos na parede do museu."],["img/mucane/slide-08.jpg", "Painel dedicado a Olga Maria Borges, com o retrato da educadora sorrindo e um texto biográfico."],["img/mucane/slide-09.jpg", "Escultura em tom terroso de uma mulher sentada, com uma vasilha de barro sobre as pernas."],["img/mucane/slide-10.jpg", "Duas fotografias emolduradas na parede amarela: uma de mãos em um ritual e outra de um altar iluminado por velas."],["img/mucane/slide-11.jpg", "Auditório do museu, com professores sentados em poltronas assistindo a uma palestra ao fundo da sala."],["img/mucane/slide-12.jpg", "Placa metálica de inauguração do Museu Capixaba do Negro (MUCANE), da Prefeitura de Vitória, datada de 5 de julho de 2012."]],
@@ -31,6 +27,9 @@ const postagens = [
    alunos:ALUNOS_SIMAVE,
    nota:"Confira abaixo se o seu nome está na lista. Em caso de dúvida sobre data, horário ou sala, procure a secretaria.",
    notaTitulo:"Vamos juntos!"},
+  {titulo:"Desfile de 7 de Setembro: patriotismo, respeito e amor pela pátria", data:"2026-09-07", tag:"7 de Setembro",
+   texto:"O desfile de 7 de Setembro é uma comemoração muito importante para o Brasil, pois representa a Independência do nosso país, conquistada em 1822. Esse momento reúne escolas, estudantes e a comunidade para demonstrar patriotismo, respeito e amor pela nossa pátria, valorizando nossa história, cultura e liberdade. É também uma oportunidade de fortalecer a união e o orgulho de ser brasileiro.",
+   video:"https://www.youtube.com/shorts/Y13hNbpFO_4"},
   {titulo:"Feira de Robótica do Ano de 2025", data:"2025-06-07", tag:"Robótica", feira:true, // feira:true = texto de abertura e fecho aparecem também na página Projetos
   
    texto:"A Feira de Robótica realizada no ano de 2025 foi um momento de aprendizado, criatividade e inovação. O evento teve como objetivo apresentar projetos desenvolvidos pelos alunos, mostrando como a tecnologia pode ser utilizada para facilitar tarefas do cotidiano e solucionar diferentes problemas.",
@@ -140,7 +139,7 @@ function corpoPost(p, comAlunos) {
   let video = "";
   if (p.video) {
     const yt = p.video.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
-    video = `<div class="post-video-caixa"><div class="post-video">${yt ? `<iframe src="https://www.youtube.com/embed/${yt[1]}" title="${esc(p.titulo)}" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>` : `<video src="${esc(p.video)}" controls playsinline preload="metadata"></video>`}</div>${yt ? `<a class="post-video-yt" href="https://youtu.be/${yt[1]}" target="_blank" rel="noopener">Não carregou? Assistir no YouTube ↗</a>` : ""}</div>`;
+    video = `<div class="post-video-caixa${/youtube\.com\/shorts\//.test(p.video) ? " vertical" : ""}"><div class="post-video">${yt ? `<iframe src="https://www.youtube.com/embed/${yt[1]}" title="${esc(p.titulo)}" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>` : `<video src="${esc(p.video)}" controls playsinline preload="metadata"></video>`}</div>${yt ? `<a class="post-video-yt" href="https://youtu.be/${yt[1]}" target="_blank" rel="noopener">Não carregou? Assistir no YouTube ↗</a>` : ""}</div>`;
   }
   const carr = p.carrossel ? `${p.carrosselTitulo ? `<h3 class="carr-titulo">${p.carrosselTitulo}</h3>` : ""}<div class="carr"><div class="carr-trilho" tabindex="0" aria-label="Projetos da feira">${p.carrossel.map((c,i) => `<article class="carr-slide${c.img ? " tem-foto" : ""}"><span class="carr-num">${i+1}</span>${c.img ? `<img src="${esc(c.img)}" alt="Fotografia do projeto ${esc(c.titulo)}${c.turma ? `, da turma ${esc(c.turma)}` : ""}" width="960" height="1280" loading="${i < 2 ? "eager" : "lazy"}">` : ""}<div class="carr-txt">${c.turma ? `<span class="carr-turma">${c.turma}</span>` : ""}<h4>${c.titulo}</h4><p>${c.texto}</p></div></article>`).join("")}</div><div class="carr-nav"><button type="button" data-d="-1" aria-label="Projeto anterior">&#9664;</button><span class="carr-pos">1 / ${p.carrossel.length}</span><button type="button" data-d="1" aria-label="Próximo projeto">&#9654;</button></div></div>` : "";
   const slides = p.slides ? `${p.slidesTitulo ? `<h3 class="carr-titulo">${p.slidesTitulo}</h3>` : ""}<div class="carr"><div class="carr-trilho" tabindex="0" aria-label="Fotos da visita">${p.slides.map(([src,alt],i) => `<article class="carr-slide so-img"><img src="${esc(src)}" alt="${esc(alt)}" width="1080" height="1350" loading="${i < 2 ? "eager" : "lazy"}"></article>`).join("")}</div><div class="carr-nav"><button type="button" data-d="-1" aria-label="Foto anterior">&#9664;</button><span class="carr-pos">1 / ${p.slides.length}</span><button type="button" data-d="1" aria-label="Próxima foto">&#9654;</button></div></div>` : "";
@@ -212,7 +211,6 @@ if ($("post")) {
       };
     }
   };
-<<<<<<< Updated upstream
 
   // Um único ouvinte atende os botões do topo e os cartões do fim
   caixa.addEventListener("click", e => {
@@ -224,11 +222,6 @@ if ($("post")) {
 
   const n = parseInt(new URLSearchParams(location.search).get("noticia"), 10);
   mostra(n >= 1 && n <= total ? n - 1 : 0, false);
-=======
-  $("btnRecente").onclick = () => mostra(atual - 1);
-  $("btnAntiga").onclick = () => mostra(atual + 1);
-  mostra(0);
->>>>>>> Stashed changes
 }
 
 // Linha do tempo (todas as postagens; as que têm carrossel abrem completas ao clicar)
